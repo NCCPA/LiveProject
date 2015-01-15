@@ -1,0 +1,12 @@
+﻿.btn {
+    transition: background-color 0.8s ease;
+}
+
+.navbar-nav > li > a {
+    color:#555555;
+    -o-transition:.7s;
+    -ms-transition:.7s;
+    -moz-transition:.7s;
+    -webkit-transition:.7s;
+    transition:.7s;
+}
