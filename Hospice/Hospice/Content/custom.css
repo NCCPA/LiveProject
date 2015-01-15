@@ -31,10 +31,24 @@ html {
 
 .login {
     max-width:400px;
-    width: auto;
+    
     margin-top:20%;
     margin-left:auto;
     margin-right:auto;
+
+    border:solid 1px black;
+    border-radius:5px;
+
+    background-color:rgba(255,255,255,0.9);
+    padding:4%;
+}
+
+.login div {
+    margin-bottom:10px;
+}
+
+.btn-login {
+    width:300px;
 }
 
 .input-group {
