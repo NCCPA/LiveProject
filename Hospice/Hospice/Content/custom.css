@@ -51,6 +51,16 @@ html {
     width:300px;
 }
 
+.img-login {
+    width:175   px;
+    margin-bottom:20px;
+    margin-left:auto;
+    margin-right:auto;
+    display:block
+    
+
+}
+
 .input-group {
     width:300px;
 }
