@@ -1,4 +1,13 @@
-﻿.btn {
+﻿
+/* Give the site a nice transition effect */
+
+body {
+    background:none;
+    width:100%;
+    min-height:400px;
+}
+
+.btn {
     transition: background-color 0.8s ease;
 }
 
@@ -10,3 +19,33 @@
     -webkit-transition:.7s;
     transition:.7s;
 }
+
+
+html {
+	background: url(/img/demo.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.login {
+    max-width:400px;
+    width: auto;
+    margin-top:20%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.input-group {
+    width:300px;
+}
+
+.panel {
+    background-color:rgba(255,255,255,0.9   );
+}
+
+.glyphicon {
+        top: 0;
+}
+
