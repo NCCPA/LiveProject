@@ -1,29 +1,62 @@
-﻿@{
+﻿@using Hospice.Models
+@model LoginViewModel
+@{
     ViewBag.Title = "Home Page";
 }
 
+<!--Custom Css for this page only link here-->
+<link href="~/Content/login-custom.css" rel="stylesheet" />
+
+<!--added comment -->
+
 <!-- This is the login Page now-->
-
 <div class="container">       
-
+<p>Andrei Added</p>
     <div class="login">
-        
-        <div class="input-group">
-            <img class="img-login" src="~/img/Stabler-Centre---black-no-bkg.gif" />
-        </div>
-        <!-- Username with icon-->
-        <div class="input-group">
-            <span class="input-group-addon glyphicon glyphicon-user"></span>
-            <input type="text" id="txtUsername" class="form-control" placeholder="Username">
-        </div>
+        <section id="loginForm">
+            @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+                @Html.AntiForgeryToken()
+            <!-- Logo Login -->
+            <div class="input-group">
+                <img class="img-login" src="~/img/Stabler-Centre---black-no-bkg.gif" />
+            </div>
+            
+            <!-- Summary validation -->
+            @Html.ValidationSummary(true, "", new { @class = "text-danger"})
+                
+            <!-- E-mail with icon-->
+            <div class="input-group">
+                <span class="input-group-addon glyphicon glyphicon-envelope"></span>
+                @Html.TextBoxFor(m => m.Email, new { @class = "form-control", @placeholder = "E-Mail" })
+                @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+            </div>
+            
 
-        <!--Password with icon-->
-        <div class="input-group">
-            <span class="input-group-addon glyphicon glyphicon-lock"></span>
-            <input type="text" id="txtPassword" class="form-control" placeholder="Password">
-        </div>
-        
-        <!-- Submit and login-->
-        <input type="button" value="Login" id="btnSubmit" class="btn btn-login btn-primary" /> 
+            <!--Password with icon-->
+            <div class="input-group">
+                <span class="input-group-addon glyphicon glyphicon-lock"></span>
+                @Html.PasswordFor(m => m.Password, new { @class = "form-control", @placeholder = "Password" })
+                @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+            </div>
+
+            <!-- Submit and login-->
+            <input type="submit" value="Login" class="btn btn-login btn-primary" />
+            }
+        </section>
     </div>
 </div>
+
+<!-- exmaple to work off DO NOT DELETE 
+    <div class="row">
+        <div class="col-md-8">
+            <section id="loginForm">
+                    @* Enable this once you have account confirmation enabled for password reset functionality
+                        <p>
+                            @Html.ActionLink("Forgot your password?", "ForgotPassword")
+                        </p>*@
+                }
+            </section>
+        </div>
+    </div>
+  <!-- End of example -->
