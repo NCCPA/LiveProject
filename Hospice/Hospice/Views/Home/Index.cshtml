@@ -42,8 +42,12 @@
         </div>
         
         <!-- Submit and login-->
-            <input type="submit" value="Login" class="btn btn-login btn-primary" />
-            }
+        <input type="submit" value="Login" class="btn btn-login btn-primary" />
+        
+        <!-- Fogot Password Btn class -->
+        @Html.ActionLink("Forgot your password?", "ForgotPassword", new {id=1}, new { @class = "btn btn-login btn-primary" })
+        }
+        
         </section>
     </div>
 </div>
