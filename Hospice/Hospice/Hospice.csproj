@@ -185,6 +185,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="img\Background_login.jpg" />
     <Content Include="img\demo.jpg" />
     <Content Include="img\demo.png" />
     <Content Include="img\Stabler-Centre---black-no-bkg.gif" />

@@ -20,9 +20,9 @@ body {
     transition:.7s;
 }
 
-
+/* img copyright = https://www.flickr.com/photos/yoshikazut/14370294009/in/photolist-nTRvKP-4PkfTi-ffFYzw-oXQM1X-f5xsAy-5nB6F4-6VbVyb-4fE4es-dpxHZ3-4HdtvP-4YwMfp-6NvD6q-8jSzEj-24G1Mr-iaop97-f8zPaK-cJDdRu-2b4Bf4-p4abdz-cS9c4m-4vMwMD-PE8kU-6PZ7My-5nB4oK-Az1va-4sJRgA-8xdwmr-dv54vk-cJba2h-3Fdgk2-tizeg-2in2DA-NACPf-rUjN4-tygNZ-8Ljy7B-4wcmim-763Jy9-83Vb7G-2Cx3YQ-okBiQp-bQbmVp-6KeWXn-cobpcN-jCMoy-prPJCo-cEe3RG-5ay3Wt-4XU8Xk-88YkyQ */
 html {
-	background: url(/img/demo.png) no-repeat center center fixed; 
+	background: url(/img/Background_login.jpg) no-repeat center center fixed; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -36,10 +36,9 @@ html {
     margin-left:auto;
     margin-right:auto;
 
-    border:solid 1px white;
     border-radius:5px;
 
-    background-color:rgba(255,255,255,0.9);
+    background-color:rgba(200,200,200,0.8);
     padding:4%;
 }
 
