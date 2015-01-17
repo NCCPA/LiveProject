@@ -4,6 +4,12 @@
     ViewBag.Title = "Log in";
 }
 
+
+<!--  If you are already Loged in you Should not be allowed here-->
+@if ( User.Identity.IsAuthenticated )
+{
+    Response.Redirect(Url.Action("Home", "Index"));
+}
 <!--Custom Css for this page only link here-->
 <link href="~/Content/login-custom.css" rel="stylesheet" />
 
