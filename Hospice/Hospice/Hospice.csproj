@@ -164,15 +164,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201501160224219_InitialCreate.cs" />
-    <Compile Include="Migrations\201501160224219_InitialCreate.Designer.cs">
-      <DependentUpon>201501160224219_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201501170351409_InitialCreate.cs" />
+    <Compile Include="Migrations\201501170351409_InitialCreate.Designer.cs">
+      <DependentUpon>201501170351409_InitialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201501160301526_changedApplicationUser_IdentityUser.cs" />
-    <Compile Include="Migrations\201501160301526_changedApplicationUser_IdentityUser.Designer.cs">
-      <DependentUpon>201501160301526_changedApplicationUser_IdentityUser.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Migrations\IdentityConfiguration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -246,11 +242,8 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201501160224219_InitialCreate.resx">
-      <DependentUpon>201501160224219_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201501160301526_changedApplicationUser_IdentityUser.resx">
-      <DependentUpon>201501160301526_changedApplicationUser_IdentityUser.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201501170351409_InitialCreate.resx">
+      <DependentUpon>201501170351409_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

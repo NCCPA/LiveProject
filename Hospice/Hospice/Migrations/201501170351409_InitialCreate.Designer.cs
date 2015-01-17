@@ -7,13 +7,13 @@ namespace Hospice.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.1-30610")]
-    public sealed partial class changedApplicationUser_IdentityUser : IMigrationMetadata
+    public sealed partial class InitialCreate : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(changedApplicationUser_IdentityUser));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialCreate));
         
         string IMigrationMetadata.Id
         {
-            get { return "201501160301526_changedApplicationUser_IdentityUser"; }
+            get { return "201501170351409_InitialCreate"; }
         }
         
         string IMigrationMetadata.Source
