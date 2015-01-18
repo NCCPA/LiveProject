@@ -44,6 +44,10 @@ namespace Hospice.Controllers
         [AllowAnonymous]
         public ActionResult Login(string returnUrl)
         {
+            if (User.Identity.IsAuthenticated)
+            {
+                return Redirect("/Home/Index");
+            }
             ViewBag.ReturnUrl = returnUrl;
             return View();
         }
