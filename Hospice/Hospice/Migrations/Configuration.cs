@@ -30,11 +30,11 @@ namespace Hospice.Migrations
 
             var users = new List<User> 
             { 
-                new User { roleName = "Volunteer"  }, 
+                new User { FirstName = "Sam" , LastName = "Smith", DOB ="1990-02-23", Phone = "2894079876", PhoneExt =  "",Eemail = "test@test.com", RoleID = 0}
     
             };
 
-            users.ForEach(d => context.Users.AddOrUpdate(x => x., d));
+            users.ForEach(d => context.Users.AddOrUpdate(x => x.Phone, d));
             context.SaveChanges();
 
         }
