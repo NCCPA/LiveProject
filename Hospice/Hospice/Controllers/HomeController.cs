@@ -30,5 +30,10 @@ namespace Hospice.Controllers
 
             return View();
         }
+
+        public ActionResult Files()
+        {
+            return View();
+        }
     }
 }

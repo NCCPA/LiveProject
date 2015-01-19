@@ -7,7 +7,7 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
-    <link href="~/Content/custom-nav.css" rel="stylesheet"  type="text/css" />
+    <link href="~/Content/Dash.css" rel="stylesheet" />
 </head>
 <body>
     @if (User.Identity.IsAuthenticated) { 
@@ -33,7 +33,7 @@
     </div>
         
      <!-- Start Fluid Container and Row.-->
-            @Html.Partial("/Views/Home/_Navigation.cshtml")
+            @Html.Partial("_Navigation")
     } 
     <div class="container body-content">
         @RenderBody()

@@ -1,0 +1,11 @@
+﻿.page-content {
+    margin-top:20px;
+}
+
+.panel-default > .panel-heading {
+    background-color:#9ACD32;
+}
+
+.widget-icon-right {
+    float:right;
+}

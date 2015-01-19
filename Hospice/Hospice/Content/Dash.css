@@ -4,8 +4,9 @@
 
 .glyphicon-home,
 .glyphicon-file,
-.glyphicon-calendar {
-    font-size:3em;
+.glyphicon-calendar,
+.glyphicon-bullhorn {
+    font-size:2.5em;
     color:#696969;
 }
 
@@ -34,7 +35,6 @@
     padding-top:20px;
     padding-bottom:5px;
     text-align:center;
-    transition:0.7s
 }
 
 .sidebar ul li a:hover {
