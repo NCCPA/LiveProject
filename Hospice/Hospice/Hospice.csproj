@@ -181,6 +181,10 @@
     <Compile Include="Migrations\201501192133537_SeedUpdate.Designer.cs">
       <DependentUpon>201501192133537_SeedUpdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201501192155055_User.cs" />
+    <Compile Include="Migrations\201501192155055_User.Designer.cs">
+      <DependentUpon>201501192155055_User.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Migrations\IdentityConfiguration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -290,6 +294,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201501192133537_SeedUpdate.resx">
       <DependentUpon>201501192133537_SeedUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501192155055_User.resx">
+      <DependentUpon>201501192155055_User.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

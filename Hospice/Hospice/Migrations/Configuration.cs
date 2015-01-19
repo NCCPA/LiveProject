@@ -28,6 +28,15 @@ namespace Hospice.Migrations
             roles.ForEach(d => context.Roles.AddOrUpdate(x => x.roleName, d));
             context.SaveChanges();
 
+            var users = new List<User> 
+            { 
+                new User { roleName = "Volunteer"  }, 
+    
+            };
+
+            users.ForEach(d => context.Users.AddOrUpdate(x => x., d));
+            context.SaveChanges();
+
         }
     }
 }
