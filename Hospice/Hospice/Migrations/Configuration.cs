@@ -28,10 +28,12 @@ namespace Hospice.Migrations
             roles.ForEach(d => context.Roles.AddOrUpdate(x => x.roleName, d));
             context.SaveChanges();
 
-            var users = new List<User> 
+            var users = new List<Hospice.Models.User> 
             { 
-                new User { FirstName = "Sam" , LastName = "Smith", DOB ="1990-02-23", Phone = "2894079876", PhoneExt =  "",Eemail = "test@test.com", RoleID = 0}
-    
+                new Hospice.Models.User { FirstName = "Sam" , LastName = "Smith", DOB = DateTime.Parse("1955-09-01"), Phone = "2894079876" , Email = "test@test.com", RoleID = 0}
+                new Hospice.Models.User { FirstName = "Sam" , LastName = "Smith", DOB = DateTime.Parse("1955-09-01"), Phone = "2894079876" , Email = "test@test.com", RoleID = 1}
+                new Hospice.Models.User { FirstName = "Sam" , LastName = "Smith", DOB = DateTime.Parse("1955-09-01"), Phone = "2894079876" , Email = "test@test.com", RoleID = 2}
+                new Hospice.Models.User { FirstName = "Sam" , LastName = "Smith", DOB = DateTime.Parse("1955-09-01"), Phone = "2894079876" , Email = "test@test.com", RoleID = 3}
             };
 
             users.ForEach(d => context.Users.AddOrUpdate(x => x.Phone, d));

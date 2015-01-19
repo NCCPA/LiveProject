@@ -44,8 +44,8 @@ namespace Hospice.Models
 
         [Display(Name="Phone")]
         [Required(ErrorMessage = "You cannot leave the phone number blank.")]
-        [Range(1, 99999999999, ErrorMessage = "The number is not valid.")]
-        public Int64 Phone { get; set; }
+        //[Range(1, 99999999999, ErrorMessage = "The number is not valid.")]
+        public string Phone { get; set; }
 
         
         [Display(Name="Phone Ext")]
