@@ -4,6 +4,7 @@ namespace Hospice.Migrations
     using Microsoft.AspNet.Identity;
     using Microsoft.AspNet.Identity.EntityFramework;
     using System;
+    using System.Collections.Generic;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
@@ -85,6 +86,27 @@ namespace Hospice.Migrations
                 manager.Create(volunteerUser, "password");
                 manager.AddToRole(volunteerUser.Id, "Admin");
             }
+
+            //End Login / Start Seed method for db
+
+           
+
         }
+
+       /* protected override void Seed( context)
+        {
+            //  This method will be called after migrating to the latest version.
+            var roles = new List<Role> 
+            { 
+                new Role { roleName = "Volunteer"}, 
+                new Role { roleName = "Staff"}, 
+                new Role { roleName = "Board"}, 
+                new Role { roleName = "Admin"}
+            };
+
+          roles.ForEach(d => context.Roles.AddOrUpdate(x => x.Name, d)); 
+            context.SaveChanges();
+         
+        }*/
     }
 }
