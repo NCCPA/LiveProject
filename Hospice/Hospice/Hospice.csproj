@@ -177,6 +177,10 @@
     <Compile Include="Migrations\201501192114332_Skeleton_seed.Designer.cs">
       <DependentUpon>201501192114332_Skeleton_seed.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201501192133537_SeedUpdate.cs" />
+    <Compile Include="Migrations\201501192133537_SeedUpdate.Designer.cs">
+      <DependentUpon>201501192133537_SeedUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Migrations\IdentityConfiguration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -283,6 +287,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201501192114332_Skeleton_seed.resx">
       <DependentUpon>201501192114332_Skeleton_seed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501192133537_SeedUpdate.resx">
+      <DependentUpon>201501192133537_SeedUpdate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
