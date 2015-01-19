@@ -15,14 +15,7 @@ namespace Hospice.Models
 
         public int ID { get; set; }
 
-        [Display(Name = "Role ")]
-        public string Role
-        {
-            get
-            {
-                return roleName;
-            }
-        }
+       
 
         [Display(Name = "Role Name")]
         [Required(ErrorMessage = "You cannot leave the role blank.")]
