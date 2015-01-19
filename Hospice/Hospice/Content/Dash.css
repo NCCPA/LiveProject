@@ -6,12 +6,12 @@
 .glyphicon-file,
 .glyphicon-calendar {
     font-size:3em;
-    color:#DCDCDC;
+    color:#696969;
 }
 
 
 .sidebar {
-    background-color:#000000;
+    background-color:#000;
     height:720px;
     width:100px;
     float:left;
@@ -34,6 +34,7 @@
     padding-top:20px;
     padding-bottom:5px;
     text-align:center;
+    transition:0.7s
 }
 
 .sidebar ul li a:hover {
@@ -44,7 +45,7 @@
 .sidebar ul li a:focus {
     text-decoration:none;   
     color:#9ACD32;
-
+    
 }
 
 .sidebar-text {
