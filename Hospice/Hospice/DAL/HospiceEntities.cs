@@ -6,24 +6,32 @@ using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 using System.Web;
 
+
+//add-migration -ConfigurationTypeName Configuration
+
 namespace Hospice.DAL
 {
     public class HospiceEntities : DbContext
     {
         public DbSet<Role> Roles { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<SubRole> SubRoles { get; set; }
+        public DbSet<UserSubRole> UserSubRoles { get; set; }
+
+        public DbSet<File> Files { get; set; }
+        public DbSet<Folder> Folders { get; set; }
+
+        public DbSet<Meeting> Meetings { get; set; }
+        public DbSet<MeetingPrivacy> MeetingPrivacys { get; set; }
+        public DbSet<MeetingResource> MeetingResources { get; set; }
+
         public DbSet<RSVP> RSVPs { get; set; }
         public DbSet<Schedule> Shedules { get; set; }
         public DbSet<SchedulePrivacy> SchedulePrivacys { get; set; }
-        public DbSet<SubRole> SubRoles { get; set; }
-        public DbSet<User> Users { get; set; }
-        public DbSet<UserSubRole> UserSubRoles { get; set; }
-        public DbSet<File> Files { get; set; }
-        public DbSet<Folder> Folders { get; set; }
-        public DbSet<Meeting> Meetings { get; set; }
-        public DbSet<MeetingPrivacy> MeetingPrivacys { get; set; }
-        public DbSet<MeetingResource> MeetingResources  { get; set; }
+
         public DbSet<Notification> Notifications { get; set; }
-        //public DbSet<>  { get; set; }
+        public DbSet<LinkHome> LinkHomes  { get; set; }
+        public DbSet<LinkStaff> LinkStaffs { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
