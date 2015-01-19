@@ -163,6 +163,7 @@
     <Compile Include="Controllers\FilesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="DAL\HospiceEntities.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -170,10 +171,45 @@
     <Compile Include="Migrations\201501170351409_InitialCreate.Designer.cs">
       <DependentUpon>201501170351409_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201501191700057_DB_Skeleton.cs" />
+    <Compile Include="Migrations\201501191700057_DB_Skeleton.Designer.cs">
+      <DependentUpon>201501191700057_DB_Skeleton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201501192114332_Skeleton_seed.cs" />
+    <Compile Include="Migrations\201501192114332_Skeleton_seed.Designer.cs">
+      <DependentUpon>201501192114332_Skeleton_seed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201501192133537_SeedUpdate.cs" />
+    <Compile Include="Migrations\201501192133537_SeedUpdate.Designer.cs">
+      <DependentUpon>201501192133537_SeedUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201501192155055_User.cs" />
+    <Compile Include="Migrations\201501192155055_User.Designer.cs">
+      <DependentUpon>201501192155055_User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Migrations\IdentityConfiguration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AnounceFile.cs" />
+    <Compile Include="Models\Anouncement.cs" />
+    <Compile Include="Models\AnouncePrivacy.cs" />
+    <Compile Include="Models\File.cs" />
+    <Compile Include="Models\Folder.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\LinkHome.cs" />
+    <Compile Include="Models\LinkStaff.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Meeting.cs" />
+    <Compile Include="Models\MeetingPrivacy.cs" />
+    <Compile Include="Models\MeetingResource.cs" />
+    <Compile Include="Models\Notification.cs" />
+    <Compile Include="Models\Role.cs" />
+    <Compile Include="Models\RSVP.cs" />
+    <Compile Include="Models\Schedule.cs" />
+    <Compile Include="Models\SchedulePrivacy.cs" />
+    <Compile Include="Models\SubRole.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserSubRole.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -546,6 +582,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="obj\Debug\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -554,6 +591,18 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201501170351409_InitialCreate.resx">
       <DependentUpon>201501170351409_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501191700057_DB_Skeleton.resx">
+      <DependentUpon>201501191700057_DB_Skeleton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501192114332_Skeleton_seed.resx">
+      <DependentUpon>201501192114332_Skeleton_seed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501192133537_SeedUpdate.resx">
+      <DependentUpon>201501192133537_SeedUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501192155055_User.resx">
+      <DependentUpon>201501192155055_User.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
