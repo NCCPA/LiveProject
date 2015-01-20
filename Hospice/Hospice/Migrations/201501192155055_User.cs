@@ -10,7 +10,7 @@ namespace Hospice.Migrations
             AddColumn("dbo.User", "FirstName", c => c.String(nullable: false, maxLength: 50));
             AddColumn("dbo.User", "LastName", c => c.String(nullable: false, maxLength: 100));
             AddColumn("dbo.User", "DOB", c => c.DateTime());
-            AddColumn("dbo.User", "Phone", c => c.Long(nullable: false));
+            AddColumn("dbo.User", "Phone", c => c.String(nullable: false));
             AddColumn("dbo.User", "PhoneExt", c => c.Int(nullable: false));
             AddColumn("dbo.User", "Email", c => c.String(maxLength: 100));
             AddColumn("dbo.User", "Address", c => c.String(maxLength: 150));
