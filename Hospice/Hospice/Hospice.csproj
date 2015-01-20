@@ -188,6 +188,14 @@
     <Compile Include="Migrations\201501192155055_User.Designer.cs">
       <DependentUpon>201501192155055_User.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201501200045117_unknownModelChange.cs" />
+    <Compile Include="Migrations\201501200045117_unknownModelChange.Designer.cs">
+      <DependentUpon>201501200045117_unknownModelChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201501200055253_IdentityFix.cs" />
+    <Compile Include="Migrations\201501200055253_IdentityFix.Designer.cs">
+      <DependentUpon>201501200055253_IdentityFix.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Migrations\IdentityConfiguration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -605,6 +613,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201501192155055_User.resx">
       <DependentUpon>201501192155055_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501200045117_unknownModelChange.resx">
+      <DependentUpon>201501200045117_unknownModelChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501200055253_IdentityFix.resx">
+      <DependentUpon>201501200055253_IdentityFix.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
