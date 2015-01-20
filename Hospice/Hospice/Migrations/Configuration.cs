@@ -32,14 +32,14 @@ namespace Hospice.Migrations
 
             var users = new List<Hospice.Models.User> 
             { 
-                new Hospice.Models.User { FirstName = "Sam" , LastName = "Smith", DOB = DateTime.Parse("1955-09-01"), Phone = "2894079876" , PhoneExt = 2, Email = "test@test.com", RoleID = 0},
+                new Hospice.Models.User { FirstName = "Sam" , LastName = "Smith", DOB = DateTime.Parse("1955-09-01"), Phone = "2894079876" , PhoneExt = 2, Email = "test@test.com", RoleID = 2},
                 new Hospice.Models.User { FirstName = "Sam" , LastName = "Smith", DOB = DateTime.Parse("1955-09-01"), Phone = "2894079876" , PhoneExt = 2, Email = "test@test.com", RoleID = 1},
                 new Hospice.Models.User { FirstName = "Sam" , LastName = "Smith", DOB = DateTime.Parse("1955-09-01"), Phone = "2894079876" , PhoneExt = 2, Email = "test@test.com", RoleID = 2},
                 new Hospice.Models.User { FirstName = "Sam" , LastName = "Smith", DOB = DateTime.Parse("1955-09-01"), Phone = "2894079876" , PhoneExt = 2, Email = "test@test.com", RoleID = 3}
             };
 
             users.ForEach(d => context.Users.AddOrUpdate(x => x.Phone, d));
-            context.SaveChanges();
+            SaveChanges(context);
 
         }
 
