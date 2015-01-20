@@ -16,33 +16,37 @@
             @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
             {
                 @Html.AntiForgeryToken()
-            <!-- Logo Login -->
+                
+                <!-- Logo Login -->
                 <div class="input-group">
-                    <img class="img-login" src="~/img/Stabler-Centre---black-no-bkg.gif" />
+                    <img class="img-login" src="~/img/Hopspice-Niagara-Logo.png" />
                 </div>
 
-            <!-- Summary validation -->
+                <!-- Summary validation -->
                 @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
-            <!-- E-mail with icon-->
+                
+                
+                <!-- E-mail with icon-->
+                <div class="error-message">@Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })</div> 
                 <div class="input-group">
                     <span class="input-group-addon glyphicon glyphicon-envelope"></span>
                     @Html.TextBoxFor(m => m.Email, new { @class = "form-control", @placeholder = "E-Mail" })
-                    @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
                 </div>
+                    
 
-
-        <!--Password with icon-->
+                 <!--Password with icon-->
+                <div class="error-message">@Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })</div>
                 <div class="input-group">
                     <span class="input-group-addon glyphicon glyphicon-lock"></span>
                     @Html.PasswordFor(m => m.Password, new { @class = "form-control", @placeholder = "Password" })
-                    @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
                 </div>
-
-        <!-- Submit and login-->
+                
+                
+                <!-- Submit and login-->
                 <input type="submit" value="Login" class="btn btn-login btn-primary" />
 
-        <!-- Fogot Password Btn class -->
+                <!-- Fogot Password Btn class -->
                 @Html.ActionLink("Forgot your password?", "ForgotPassword", new { id = 1 }, new { @class = "btn btn-login btn-primary" })
             }
 
