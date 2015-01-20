@@ -3,7 +3,7 @@ namespace Hospice.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Skeleton_seed : DbMigration
+    public partial class ConfigInitial : DbMigration
     {
         public override void Up()
         {
@@ -27,6 +27,22 @@ namespace Hospice.Migrations
             
             CreateTable(
                 "dbo.Folder",
+                c => new
+                    {
+                        ID = c.Int(nullable: false, identity: true),
+                    })
+                .PrimaryKey(t => t.ID);
+            
+            CreateTable(
+                "dbo.LinkHome",
+                c => new
+                    {
+                        ID = c.Int(nullable: false, identity: true),
+                    })
+                .PrimaryKey(t => t.ID);
+            
+            CreateTable(
+                "dbo.LinkStaff",
                 c => new
                     {
                         ID = c.Int(nullable: false, identity: true),
@@ -111,8 +127,24 @@ namespace Hospice.Migrations
                 c => new
                     {
                         ID = c.Int(nullable: false, identity: true),
+                        FirstName = c.String(nullable: false, maxLength: 50),
+                        LastName = c.String(nullable: false, maxLength: 100),
+                        DOB = c.DateTime(),
+                        Phone = c.String(nullable: false),
+                        PhoneExt = c.Int(nullable: false),
+                        Email = c.String(maxLength: 100),
+                        Address = c.String(maxLength: 150),
+                        isActive = c.Boolean(nullable: false),
+                        isContact = c.Boolean(nullable: false),
+                        canUploadFile = c.Boolean(nullable: false),
+                        canCreateMeeting = c.Boolean(nullable: false),
+                        Position = c.String(maxLength: 100),
+                        PositionDescription = c.String(maxLength: 1000),
+                        RoleID = c.Int(nullable: false),
                     })
-                .PrimaryKey(t => t.ID);
+                .PrimaryKey(t => t.ID)
+                .ForeignKey("dbo.Role", t => t.RoleID)
+                .Index(t => t.RoleID);
             
             CreateTable(
                 "dbo.UserSubRole",
@@ -189,6 +221,8 @@ namespace Hospice.Migrations
                     })
                 .PrimaryKey(t => t.Id);
             
+            DropForeignKey("dbo.User", "RoleID", "dbo.Role");
+            DropIndex("dbo.User", new[] { "RoleID" });
             DropTable("dbo.UserSubRole");
             DropTable("dbo.User");
             DropTable("dbo.SubRole");
@@ -200,6 +234,8 @@ namespace Hospice.Migrations
             DropTable("dbo.Meeting");
             DropTable("dbo.MeetingResource");
             DropTable("dbo.MeetingPrivacy");
+            DropTable("dbo.LinkStaff");
+            DropTable("dbo.LinkHome");
             DropTable("dbo.Folder");
             DropTable("dbo.File");
             CreateIndex("dbo.AspNetUserLogins", "UserId");

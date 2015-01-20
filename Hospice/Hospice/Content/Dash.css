@@ -2,7 +2,13 @@
     margin-bottom:0px;
 }
 
-.glyphicon {
+.glyphicon-user,
+.glyphicon-breifcase,
+.glyphicon-home,
+.glyphicon-file,
+.glyphicon-calendar,
+.glyphicon-bell,
+.glyphicon-book {
     font-size:2.5em;
     color:#696969;
 }
