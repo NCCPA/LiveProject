@@ -63,13 +63,13 @@ namespace Hospice.Models
         [Display(Name = "isActive")]
         public bool isActive { get; set; }
 
-        [Display(Name="Is Contact")]
+        [Display(Name="isContact")]
         public bool isContact{ get; set; }
 
         [Display(Name = "Can Upload File")]
         public bool canUploadFile { get; set; }
 
-        [Display(Name = "Can Create Meetingt")]
+        [Display(Name = "Can Create Meeting")]
         public bool canCreateMeeting { get; set; }
 
         [Display(Name = "Position")]
