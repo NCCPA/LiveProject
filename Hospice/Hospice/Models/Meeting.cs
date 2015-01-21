@@ -35,7 +35,7 @@ namespace Hospice.Models
           [DataType(DataType.Date)]
           [Required(ErrorMessage = "You cannot leave the date blank.")]
           [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
-          public DateTime? DOB { get; set; }
+          public DateTime? Date { get; set; }
 
           [Display(Name = "Length")]
           //[Required(ErrorMessage = "You cannot leave the title blank.")]
@@ -71,9 +71,9 @@ namespace Hospice.Models
               //instead of just in the validaiton summary.
               //var field = new[] { "DOB" };
 
-              if (DOB.GetValueOrDefault() < DateTime.Now)
+              if (Date.GetValueOrDefault() < DateTime.Now)
               {
-                  yield return new ValidationResult("The Meeting Date cannot be in the past.", new[] { "DOB" });
+                  yield return new ValidationResult("The Meeting Date cannot be in the past.", new[] { "Date" });
               }
           }
     }
