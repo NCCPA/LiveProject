@@ -10,7 +10,7 @@ namespace Hospice.Models
     {
         public Notification()
             {
-                // this.Users = new HashSet<Users>();
+                this.User = new HashSet<User>();
             }
 
             public int ID { get; set; }
@@ -29,19 +29,21 @@ namespace Hospice.Models
         [Display(Name = "Date")]
         public DateTime Date { get; set; }
 
-       /*
-        * We can figure dis sh1t out later
-        * 
+       
+        //1 is Anounce | 2 is  Meeting | 3 is Schedule
         [Display(Name = "Notification Type (Announce/Meeting/Schedule)")]
         [Required(ErrorMessage = "You cannot leave the Notification Type blank.")]
-        [Range(1, 9999, ErrorMessage = "The number is not valid.")]
+        [Range(1, 3, ErrorMessage = "The number is not valid.")]
         public string Type { get; set; }
 
         [Display(Name = "Type ID")]
         [Required(ErrorMessage = "You cannot leave the TypeID blank.")]
-        [Range(1, 9999, ErrorMessage = "The number is not valid.")]
+        //[Range(1, 999999, ErrorMessage = "The number is not valid.")]
         public int TypeID { get; set; }
-        */
-        //public virtual ICollection<Users> Users { get; set; }
+
+        [Required(ErrorMessage = "You cannot leave the UserID blank.")]
+        public string UserID { get; set; }
+
+        public virtual ICollection<User> User { get; set; }
     }
 }

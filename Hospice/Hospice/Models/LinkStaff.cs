@@ -10,7 +10,7 @@ namespace Hospice.Models
     {
         public LinkStaff()
             {
-                // this.Users = new HashSet<Users>();
+                 this.Role = new HashSet<Role>();
             }
 
             public int ID { get; set; }
@@ -29,11 +29,9 @@ namespace Hospice.Models
         public bool isVisible { get; set; }
         
         //add role
+        [Required(ErrorMessage = "You must select a Role.")]
+        public int RoleID { get; set; }
 
-
-
-
-
-        //public virtual ICollection<Users> Users { get; set; }
+        public virtual ICollection<Role> Role { get; set; }
     }
 }
