@@ -41,9 +41,6 @@ namespace Hospice.Models
         //[Range(1, 999999, ErrorMessage = "The number is not valid.")]
         public int TypeID { get; set; }
 
-        [Required(ErrorMessage = "You cannot leave the UserID blank.")]
-        public string UserID { get; set; }
-
         public virtual ICollection<User> User { get; set; }
     }
 }
