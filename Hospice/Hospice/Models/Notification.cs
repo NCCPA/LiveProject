@@ -10,7 +10,9 @@ namespace Hospice.Models
     {
         public Notification()
             {
+                this.Role = new HashSet<Role>();
                 this.User = new HashSet<User>();
+                this.SubRole = new HashSet<SubRole>();
             }
 
             public int ID { get; set; }
@@ -41,5 +43,7 @@ namespace Hospice.Models
         public int TypeID { get; set; }
 
         public virtual ICollection<User> User { get; set; }
+        public virtual ICollection<SubRole> SubRole { get; set; }
+        public virtual ICollection<Role> Role { get; set; }
     }
 }

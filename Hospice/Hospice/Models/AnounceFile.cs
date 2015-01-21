@@ -11,7 +11,8 @@ namespace Hospice.Models
         
           public AnounceFile()
             {
-                // this.Users = new HashSet<Users>();
+                 this.File = new HashSet<File>();
+                 this.Anouncement = new HashSet<Anouncement>();
             }
 
             public int ID { get; set; }
@@ -25,6 +26,8 @@ namespace Hospice.Models
             [Required(ErrorMessage = "You cannot leave the FileID blank.")]
             [Range(1, 9999, ErrorMessage = "The number is not valid.")]
             public int FileID { get; set; }
-        //public virtual ICollection<Users> Users { get; set; }
+
+            public virtual ICollection<File> File { get; set; }
+            public virtual ICollection<Anouncement> Anouncement { get; set; }
     }
 }

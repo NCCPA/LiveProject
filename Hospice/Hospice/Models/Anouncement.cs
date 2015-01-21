@@ -11,7 +11,7 @@ namespace Hospice.Models
 
         public Anouncement()
         {
-            // this.Users = new HashSet<Users>();
+            this.User = new HashSet<User>();
         }
 
         public int ID { get; set; }
@@ -31,6 +31,11 @@ namespace Hospice.Models
         [Display(Name = "isDeath")]
         public bool isDeath { get; set; }
 
-        //public virtual ICollection<Users> Users { get; set; }
+        //id of person
+       // [Required(ErrorMessage = "You must select a User.")]
+        public int CreatedByID { get; set; }
+
+        public virtual ICollection<User> User { get; set; }
+
     }
 }

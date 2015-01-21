@@ -10,11 +10,23 @@ namespace Hospice.Models
 
         public MeetingResource()
             {
-                // this.Users = new HashSet<Users>();
+                this.File = new HashSet<File>();
+                this.Meeting = new HashSet<Meeting>();
             }
 
             public int ID { get; set; }
 
-        //public virtual ICollection<Users> Users { get; set; }
+            [Display(Name = "MeetingID")]
+            [Required(ErrorMessage = "You cannot leave the MeetingID blank.")]
+            [Range(1, 9999, ErrorMessage = "The number is not valid.")]
+            public int AnnounceID { get; set; }
+
+            [Display(Name = "FileID")]
+            [Required(ErrorMessage = "You cannot leave the FileID blank.")]
+            [Range(1, 9999, ErrorMessage = "The number is not valid.")]
+            public int FileID { get; set; }
+
+            public virtual ICollection<File> File { get; set; }
+            public virtual ICollection<Meeting> Meeting { get; set; }
     }
 }
