@@ -13,9 +13,15 @@ namespace Hospice.Models
                 this.Role = new HashSet<Role>();
                 this.User = new HashSet<User>();
                 this.SubRole = new HashSet<SubRole>();
+                this.Anouncement = new HashSet<Anouncement>();
             }
 
             public int ID { get; set; }
+
+            [Display(Name = "AnounceID")]
+            [Required(ErrorMessage = "You cannot leave the Anouncement blank.")]
+            [Range(1, 99999, ErrorMessage = "The number is not valid.")]
+            public int AnounceID { get; set; }
 
             // [Required(ErrorMessage = "You must select a Sub Role.")]
             [Display(Name = "RoleID")]
@@ -38,5 +44,6 @@ namespace Hospice.Models
             public virtual ICollection<User> User { get; set; }
             public virtual ICollection<SubRole> SubRole { get; set; }
             public virtual ICollection<Role> Role { get; set; }
+            public virtual ICollection<Anouncement> Anouncement { get; set; }
     }
 }
