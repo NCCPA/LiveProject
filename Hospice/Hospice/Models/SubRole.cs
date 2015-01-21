@@ -18,7 +18,7 @@ namespace Hospice.Models
 
         [Display(Name = "Sub Role Name")]
         [Required(ErrorMessage = "You cannot leave the Sub Role blank.")]
-        [StringLength(40, ErrorMessage = "Sub Role cannot be more than 20 characters long.")]
+        [StringLength(40, ErrorMessage = "Sub Role cannot be more than 40 characters long.")]
         public string roleName { get; set; }
 
         [Required(ErrorMessage = "You must select a Role.")]

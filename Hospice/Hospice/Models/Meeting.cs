@@ -63,5 +63,18 @@ namespace Hospice.Models
           public int CreatedByID { get; set; }
 
           public virtual ICollection<User> User { get; set; }
+
+          public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
+          {
+              //Create a string array containing the one element-the field where our error message should show up.
+              //then you pass this to the ValidaitonResult This is only so the mesasge displays beside the field
+              //instead of just in the validaiton summary.
+              //var field = new[] { "DOB" };
+
+              if (DOB.GetValueOrDefault() < DateTime.Now)
+              {
+                  yield return new ValidationResult("The Meeting Date cannot be in the past.", new[] { "DOB" });
+              }
+          }
     }
 }

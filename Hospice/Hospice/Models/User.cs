@@ -28,13 +28,13 @@ namespace Hospice.Models
 
         [Display(Name="First Name")]
         [Required(ErrorMessage = "You cannot leave the first name blank.")]
-        [StringLength(50, ErrorMessage = "First name cannot be more than 50 characters long.")]
+        [StringLength(50, ErrorMessage = "First Name cannot be more than 50 characters long.")]
         public string FirstName { get; set; }
 
 
         [Display(Name="Last Name")]
         [Required(ErrorMessage = "You cannot leave the last name blank.")]
-        [StringLength(100, ErrorMessage = "Lasst name cannot be more than 100 characters long.")]
+        [StringLength(100, ErrorMessage = "Last Name cannot be more than 100 characters long.")]
         public string LastName { get; set; }
 
         [Display(Name="Date Of Birth")]
@@ -50,7 +50,7 @@ namespace Hospice.Models
         
         [Display(Name="Phone Ext")]
         [Range(1,   9999, ErrorMessage = "The number is not valid.")]
-        public int PhoneExt { get; set; }
+        public int? PhoneExt { get; set; }
 
         [Display(Name = "Email")]
         [StringLength(100, ErrorMessage = "Your email cannot be more than 100 characters long.")]
