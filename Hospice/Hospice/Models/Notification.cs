@@ -28,7 +28,6 @@ namespace Hospice.Models
 
         [Display(Name = "Date")]
         public DateTime Date { get; set; }
-
        
         //1 is Anounce | 2 is  Meeting | 3 is Schedule
         [Display(Name = "Notification Type (Announce/Meeting/Schedule)")]
