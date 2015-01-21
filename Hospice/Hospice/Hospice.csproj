@@ -579,7 +579,7 @@
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Contact\Index.cshtml" />
     <Content Include="Views\Meetings\Index.cshtml" />
-    <Content Include="Views\Schedule\Schedule.cshtml" />
+    <Content Include="Views\Schedule\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

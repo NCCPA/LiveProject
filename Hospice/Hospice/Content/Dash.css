@@ -3,38 +3,40 @@
 }
 
 .glyphicon-user,
-.glyphicon-breifcase,
+.glyphicon-briefcase,
 .glyphicon-home,
 .glyphicon-file,
 .glyphicon-calendar,
 .glyphicon-bell,
-.glyphicon-book {
-    font-size:2.5em;
-    color:#696969;
+.glyphicon-book,
+.glyphicon-tasks {
+    font-size:1.5em;
+    color:#fff;
 }
 
 
 .sidebar {
-    background-color:#000;
-    height:100%;
-    width:100px;
+    background-color:#000000;
+    width:150px;
+    position:absolute;
     float:left;
-
 }
 
 .sidebar ul {
     margin:0px;
     padding:0px;
+    width:inherit;
 }
 
 .sidebar ul li {
     list-style:none;
     display:inline-block;
     box-sizing:content-box;
+    width:inherit
 }
 
 .sidebar ul li a {
-    width:100px;
+    width:100%;
     padding-top:20px;
     padding-bottom:5px;
     text-align:center;
@@ -52,7 +54,7 @@
 }
 
 .sidebar-text {
-    font-size:.4em;
+    font-size:.8em;
     padding:10px 0;
 }
 
@@ -66,4 +68,18 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
+    background-color:#fff;
+}
+
+.custom-footer {
+    position:relative;
+    float:left;
+}
+
+.dash-logo {
+    width:75%;
+    height:50%;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
 }

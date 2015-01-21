@@ -9,48 +9,29 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
     <link href="~/Content/Dash.css" rel="stylesheet" />
 </head>
-<body>
-    @if (User.Identity.IsAuthenticated) { 
-        <div class="navbar navbar-default navbar-static-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-                @Html.Partial("_LoginPartial")
-            </div>
-        </div>
-    </div>
-        
-     <!-- Start Fluid Container and Row.-->
-            @Html.Partial("_Navigation")
-    } 
-    <div class="container body-content">
-        @RenderBody()
+<body>  
+    
+    <!-- Side Bar -->
+    @Html.Partial("_Navigation")
 
-    </div>
-   
-        
-        
-        @if (User.Identity.IsAuthenticated) { 
-        <div class="container">
+    <!-- Renders the page they are on-->
+    <div class="container page-content">
+        <div class="wrapper">
+            @RenderBody()
+        </div>
+
+
+
+
+        @if (User.Identity.IsAuthenticated)
+        {
         <!-- Add the Footer here with social media and other recourses like contributors-->
             <footer>
                 <p>&copy; @DateTime.Now.Year - Hospice Niagara</p>
             </footer>
-        </div>
-        }
 
+        }
+    </div>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)

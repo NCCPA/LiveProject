@@ -3,6 +3,11 @@
 <div class="sidebar">
     <ul>
 
+        <!-- Company Logo -->
+        <li>
+            <a href="/Home/Index"><img src="~/img/Hopspice-Niagara-Logo.png" class="dash-logo" /></a>
+        </li>
+
         <!-- Home -->
         <li>
             <a href="/Home/Index" class="glyphicon glyphicon-home">
@@ -10,6 +15,15 @@
             </a>
         </li>
         
+        @if (User.IsInRole("Admin")) { 
+        <!-- Admin -->
+        <li>
+            <a href="/Admin/Index" class="glyphicon glyphicon-user">
+                <div class="sidebar-text">Admin</div>
+            </a>
+        </li>
+        }
+
         <!-- Files/Resources -->
         <li>
             <a href="/Files/Index" class="glyphicon glyphicon-file">
@@ -52,11 +66,5 @@
             </a>
         </li>
 
-        <!-- Admin -->
-        <li>
-            <a href="/Admin/Index" class="glyphicon glyphicon-user">
-                <div class="sidebar-text">Admin</div>
-            </a>
-        </li>
     </ul>
 </div>
