@@ -9,7 +9,8 @@
 .glyphicon-calendar,
 .glyphicon-bell,
 .glyphicon-book,
-.glyphicon-tasks {
+.glyphicon-tasks,
+.glyphicon-log-out {
     font-size:1.5em;
     color:#fff;
 }
