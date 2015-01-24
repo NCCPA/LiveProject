@@ -16,6 +16,10 @@ $(document).ready(function () {
     var height = $(document).height();
     $('.sidebar').height(height);
 
+    $(window).resize(function () {
+        var height = $(document).height();
+        $('.sidebar').height(height);
+    })
 
     //Make the side Bar stick while scrolling
     $(window).scroll(function () {

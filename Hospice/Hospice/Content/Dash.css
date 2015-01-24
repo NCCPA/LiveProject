@@ -11,13 +11,13 @@
 .glyphicon-book,
 .glyphicon-tasks,
 .glyphicon-log-out {
-    font-size:1.5em;
-    color:#fff;
+    font-size:3em;
+    color:#000000;
 }
 
 
 .sidebar {
-    background-color:#000000;
+    background-color:#9ACD32;
     width:150px;
     position:absolute;
     float:left;
@@ -36,6 +36,10 @@
     width:inherit
 }
 
+.sidebar ul li:hover {
+    background-color:#356b00;
+}
+
 .sidebar ul li a {
     width:100%;
     padding-top:20px;
@@ -45,36 +49,53 @@
 
 .sidebar ul li a:hover {
     text-decoration:none;
+    color:#1e1e1e;
 }
 
-.sidebar ul li a:active,
-.sidebar ul li a:focus {
+.sidebar ul li a:active {
     text-decoration:none;   
-    color:#9ACD32;
+    color:#fff;
     
 }
 
 .sidebar-text {
-    font-size:.8em;
-    padding:10px 0;
-}
+    font-size:16pt;
+    color:#fff;
+    text-align: center;
+    padding-bottom:20px;
+    opacity: 0;
+    visibility: hidden;
+    text-align: left;
+    text-transform:uppercase;
+    font-weight:bold;
+    z-index:10;
 
-.sidebar ul li span {
-    width:100%;
+    position:absolute;
+    left:180px;
+    width:200px;
+    height:67px;
+    bottom:1px;
+    padding:20px 10px;
+
+    transition-property:left, opacity;
+    transition-duration: 0.23s;
+} 
+
+.sidebar ul li a:hover span {
+    visibility: visible;
+    background-color: #4c7400;
+    left:150px;
+    opacity: 1;
 }
 
 .active-app {
-    color:#9ACD32;
+    color:#fff;
+    text-shadow:0px 0px 40px white;
 }
 
 body {
     font-family: 'Open Sans', sans-serif;
     background-color:#fff;
-}
-
-.custom-footer {
-    position:relative;
-    float:left;
 }
 
 .dash-logo {
