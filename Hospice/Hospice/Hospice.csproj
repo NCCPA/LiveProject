@@ -176,6 +176,10 @@
     <Compile Include="Migrations\201501220130435_InitialCreation1db.Designer.cs">
       <DependentUpon>201501220130435_InitialCreation1db.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201501250317010_AddedFirstName.cs" />
+    <Compile Include="Migrations\201501250317010_AddedFirstName.Designer.cs">
+      <DependentUpon>201501250317010_AddedFirstName.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AnounceFile.cs" />
@@ -514,6 +518,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="img\adminLogin.jpg" />
     <Content Include="img\Background_log.jpg" />
     <Content Include="img\Background_login.jpg" />
     <Content Include="img\demo.jpg" />
@@ -587,6 +592,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201501220130435_InitialCreation1db.resx">
       <DependentUpon>201501220130435_InitialCreation1db.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501250317010_AddedFirstName.resx">
+      <DependentUpon>201501250317010_AddedFirstName.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

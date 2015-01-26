@@ -113,7 +113,8 @@ namespace Hospice.Migrations
             var adminUser = new ApplicationUser
             {
                 UserName = "admin@outlook.com",
-                Email = "admin@outlook.com"
+                Email = "admin@outlook.com",
+                FName = "Amanda"
             };
 
 
