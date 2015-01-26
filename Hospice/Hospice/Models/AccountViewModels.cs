@@ -84,6 +84,9 @@ namespace Hospice.Models
         [Display(Name = "First Name")]
         [StringLength(45, ErrorMessage = "First Name must be less than 45 characters")]
         public string FName { get; set; }
+
+
+
     }
 
     public class ResetPasswordViewModel

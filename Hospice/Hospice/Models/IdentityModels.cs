@@ -19,6 +19,8 @@ namespace Hospice.Models
             return userIdentity;
         }
             public string FName { get; set;}
+
+            
         }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
