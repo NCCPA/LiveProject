@@ -2,9 +2,9 @@
 $(document).ready(function () {
     //<![CDATA[
     $(function() {
-        $('.sidebar ul li a').each(function() {
+        $('.nav li a').each(function() {
             if ($(this).attr('href')  ===  window.location.pathname) {
-                $(this).addClass('active-app');
+                $(this).parent().addClass('active');
             }
         });
     });  
@@ -12,17 +12,17 @@ $(document).ready(function () {
 
 
 
-    //make sidebar big as viewport or devicing viewing
-    var height = $(document).height();
-    $('.sidebar').height(height);
+    ////make sidebar big as viewport or devicing viewing
+    //var height = $(document).height();
+    //$('.sidebar').height(height);
 
-    $(window).resize(function () {
-        var height = $(document).height();
-        $('.sidebar').height(height);
-    })
+    //$(window).resize(function () {
+    //    var height = $(document).height();
+    //    $('.sidebar').height(height);
+    //})
 
-    //Make the side Bar stick while scrolling
-    $(window).scroll(function () {
-        $('.sidebar').css(top, $(this).scrollTop());
-    });
+    ////Make the side Bar stick while scrolling
+    //$(window).scroll(function () {
+    //    $('.sidebar').css(top, $(this).scrollTop());
+    //});
 });
