@@ -1,81 +1,34 @@
 ﻿
  <!-- sidebar -->
-<div class="sidebar">
-    <ul>
+<nav class="nav navbar-default navbar-static-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+            </button>
+            <a class="navbar-brand" href="index.html">SB Admin v2.0</a>
+        </div>
 
-        <!-- Company Logo -->
-        <li class="sidebar-no-change">
-            <a href="/Home/Index"><img src="~/img/Stabler-Centre---black-no-bkg.gif" class="dash-logo" /></a>
-        </li>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+                <li><a href="/home/Index"><span class="glyphicon glyphicon-home"></span> home</a></li>
+                <li><a href="/Admin/Index"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+                <li><a href="/Announcement/Index"><span class="glyphicon glyphicon-bell"></span> Announcement</a></li>
+                <li><a href="/Files/Index"><span class="glyphicon glyphicon-file"></span> Resources</a></li>
+                <li><a href="/Contact/Index"><span class="glyphicon glyphicon-book"></span> Contacts</a></li>
+                <li><a href="/Calendar/Index"><span class="glyphicon glyphicon-calendar"></span> Calendar</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-ok-circle"></span> Events</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-briefcase"></span> Meeting</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">@User.Identity.Name</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
 
-        <!-- Home -->
-        <li>
-            <a href="/Home/Index" class="glyphicon glyphicon-home">
-                <span class="sidebar-text">Home</span>
-            </a>
-        </li>
-        
-        @if (User.IsInRole("Admin")) { 
-        <!-- Admin -->
-        <li>
-            <a href="/Admin/Index" class="glyphicon glyphicon-user">
-                <span class="sidebar-text">Admin</span>
-            </a>
-        </li>
-        }
+    </div>
 
-        <!-- Files/Resources -->
-        <li>
-            <a href="/Files/Index" class="glyphicon glyphicon-file">
-                <span class="sidebar-text">Files</span>
-            </a>
-        </li>
+       
 
-        <!-- Calendar -->
-        <li>
-            <a href="/Calendar/Index" class="glyphicon glyphicon-calendar">
-                <span class="sidebar-text">Calendar</span>
-            </a>
-        </li>
-
-        <!-- Announcements -->
-        <li>
-            <a href="/Announcement/Index" class="glyphicon glyphicon-bell">
-                <span class="sidebar-text">Announcements</span>
-            </a>
-        </li>
-
-        <!-- Contacts -->
-        <li>
-            <a href="/Contact/Index" class="glyphicon glyphicon-book">
-                <span class="sidebar-text">Contacts</span>
-            </a>
-        </li>
-
-        <!-- Meetings -->
-        <li>
-            <a href="/Meetings/Index" class="glyphicon glyphicon-briefcase">
-                <span class="sidebar-text">Meetings</span>
-            </a>
-        </li>
-        
-        <!-- Schedule -->
-        <li>
-            <a href="/Schedule/Index" class="glyphicon glyphicon-tasks">
-                <span class="sidebar-text">Schedule</span>
-            </a>
-        </li>
-
-        <!-- Account section -->
-        <li>
-            <span class="sidebar-account"></span>
-            <img class="img-responsive" src="~/img/adminLogin.jpg" />
-        </li>
-        <li>
-            <a href="/Account/LogOff" class="glyphicon glyphicon-log-out">
-                <span class="sidebar-text">Logout</span>
-            </a>
-        </li>
-
-    </ul>
-</div>
+    
+</nav>
