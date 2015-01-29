@@ -84,13 +84,18 @@ namespace Hospice.Migrations
             //users.ForEach(d => context.Users.AddOrUpdate(x => x.Phone, d));
             //SaveChanges(context);
 
-            //Admin role
-                var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(context));
+            var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(context));
 
             //create Role admin if it does not exist
             if (!context.Roles.Any(r => r.Name == "Admin"))
             {
                 var roleresult = roleManager.Create(new IdentityRole("Admin"));
+            }
+
+            //create role Board
+            if (!context.Roles.Any(r => r.Name == "Board"))
+            {
+                var roleresult = roleManager.Create(new IdentityRole("Board"));
             }
 
             //create role Staff
