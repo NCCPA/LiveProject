@@ -167,6 +167,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MeetingsController.cs" />
+    <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\ScheduleController.cs" />
     <Compile Include="DAL\HospiceEntities.cs" />
     <Compile Include="Global.asax.cs">
@@ -581,6 +582,7 @@
     <Content Include="Views\Contact\Index.cshtml" />
     <Content Include="Views\Meetings\Index.cshtml" />
     <Content Include="Views\Schedule\Index.cshtml" />
+    <Content Include="Views\Profile\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
