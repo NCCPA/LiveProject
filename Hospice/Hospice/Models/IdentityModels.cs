@@ -4,6 +4,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Hospice.Models;
+using System.ComponentModel.DataAnnotations;
+using System;
 
 namespace Hospice.Models
 {
@@ -18,10 +20,27 @@ namespace Hospice.Models
             // Add custom user claims here
             return userIdentity;
         }
-            public string FName { get; set;}
 
-            
-        }
+        //add more properties here from our custom classes
+        [Display(Name = "First Name")]
+        [Required(ErrorMessage = "You cannot leave the first name blank.")]
+        [StringLength(50, ErrorMessage = "First Name cannot be more than 50 characters long.")]
+        public string FName { get; set; }
+
+        [Display(Name = "Last Name")]
+        [Required(ErrorMessage = "You cannot leave the last name blank.")]
+        [StringLength(100, ErrorMessage = "Last Name cannot be more than 100 characters long.")]
+        public string LName { get; set; }
+
+        [Display(Name = "Date Of Birth")]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        public DateTime DOB { get; set; }
+
+        [Display(Name = "Phone Ext")]
+        [Range(1, 9999, ErrorMessage = "The number is not valid.")]
+        public int? UserPhoneExt { get; set; }
+    }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
