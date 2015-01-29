@@ -6,6 +6,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Hospice.Models;
 using System.ComponentModel.DataAnnotations;
 using System;
+using System.Collections.Generic;
 
 namespace Hospice.Models
 {
@@ -24,7 +25,7 @@ namespace Hospice.Models
         //add more properties here from our custom classes
         [Display(Name = "First Name")]
         [Required(ErrorMessage = "You cannot leave the first name blank.")]
-        [StringLength(50, ErrorMessage = "First Name cannot be more than 50 characters long.")]
+        [StringLength(100, ErrorMessage = "First Name cannot be more than 50 characters long.")]
         public string FName { get; set; }
 
         [Display(Name = "Last Name")]
@@ -35,11 +36,49 @@ namespace Hospice.Models
         [Display(Name = "Date Of Birth")]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
-        public DateTime DOB { get; set; }
+        public DateTime? DOB { get; set; }
 
         [Display(Name = "Phone Ext")]
         [Range(1, 9999, ErrorMessage = "The number is not valid.")]
         public int? UserPhoneExt { get; set; }
+
+        [Display(Name = "isActive")]
+        public bool isActive { get; set; }
+
+        [Display(Name = "isContact")]
+        public bool isContact { get; set; }
+
+        [Display(Name = "Can Upload File")]
+        public bool canUploadFile { get; set; }
+
+        [Display(Name = "Can Create Meeting")]
+        public bool canCreateMeeting { get; set; }
+
+        [Display(Name = "Position")]
+        [StringLength(100, ErrorMessage = "Your position cannot be more than 150 characters long.")]
+        public string Position { get; set; }
+
+        [Display(Name = "Position Description")]
+        [StringLength(1000, ErrorMessage = "Your position description cannot be more than 1000 characters long.")]
+        public string PositionDescription { get; set; }
+
+        [Required(ErrorMessage = "You must select a role")]
+        public int RoleID { get; set; }
+
+        public virtual Role AspNetUserRoles { get; set; }
+
+        public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
+        {
+            //Create a string array containing the one element-the field where our error message should show up.
+            //then you pass this to the ValidaitonResult This is only so the mesasge displays beside the field
+            //instead of just in the validaiton summary.
+            //var field = new[] { "DOB" };
+
+            if (DOB.GetValueOrDefault() > DateTime.Now)
+            {
+                yield return new ValidationResult("Date of Birth cannot be in the future.", new[] { "DOB" });
+            }
+        }
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>

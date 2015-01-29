@@ -181,6 +181,14 @@
     <Compile Include="Migrations\201501250317010_AddedFirstName.Designer.cs">
       <DependentUpon>201501250317010_AddedFirstName.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201501290315484_AspUserMerge.cs" />
+    <Compile Include="Migrations\201501290315484_AspUserMerge.Designer.cs">
+      <DependentUpon>201501290315484_AspUserMerge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201501290324553_FKConflict.cs" />
+    <Compile Include="Migrations\201501290324553_FKConflict.Designer.cs">
+      <DependentUpon>201501290324553_FKConflict.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AnounceFile.cs" />
@@ -598,6 +606,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201501250317010_AddedFirstName.resx">
       <DependentUpon>201501250317010_AddedFirstName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501290315484_AspUserMerge.resx">
+      <DependentUpon>201501290315484_AspUserMerge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201501290324553_FKConflict.resx">
+      <DependentUpon>201501290324553_FKConflict.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

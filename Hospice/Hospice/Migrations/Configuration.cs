@@ -108,13 +108,14 @@ namespace Hospice.Migrations
 
             //Create a generic user
             var manager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
-
+            
             //Create admin user
             var adminUser = new ApplicationUser
             {
                 UserName = "admin@outlook.com",
                 Email = "admin@outlook.com",
-                FName = "Amanda"
+                FName = "Amanda",
+                LName = "Ricki"
             };
 
 
@@ -122,14 +123,18 @@ namespace Hospice.Migrations
             var staffUser = new ApplicationUser
             {
                 UserName = "staff@outlook.com",
-                Email = "staff@outlook.com"
+                Email = "staff@outlook.com",
+                FName = "staffAmanda",
+                LName = "Ricki"
             };
 
             //Create Volunteer
             var volunteerUser = new ApplicationUser
             {
                 UserName = "volunteer@outlook.com",
-                Email = "volunteer@outlook.com"
+                Email = "volunteer@outlook.com",
+                FName = "staffAmanda",
+                LName = "Ricki"
             };
 
 
