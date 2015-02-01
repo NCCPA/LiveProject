@@ -189,6 +189,10 @@
     <Compile Include="Migrations\201501290324553_FKConflict.Designer.cs">
       <DependentUpon>201501290324553_FKConflict.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201502010930558_FileModel.cs" />
+    <Compile Include="Migrations\201502010930558_FileModel.Designer.cs">
+      <DependentUpon>201502010930558_FileModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AnounceFile.cs" />
@@ -612,6 +616,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201501290324553_FKConflict.resx">
       <DependentUpon>201501290324553_FKConflict.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201502010930558_FileModel.resx">
+      <DependentUpon>201502010930558_FileModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
