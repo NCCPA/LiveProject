@@ -1,4 +1,6 @@
-﻿.navbar-default {
+﻿body{background-color:#fafafa;}
+
+.navbar-default {
 	background-color: #000000;
 	border-color: #000;
 }
