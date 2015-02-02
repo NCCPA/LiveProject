@@ -33,5 +33,14 @@ footer {
 }
 
 .wrapper {
-    padding:2%;
-    color:#000;
+    padding: 2%;
+    color: #000;
+}
+
+a {
+    color:#2d52b7;
+}
+
+a:hover {
+    color:#1a3275;
+}
