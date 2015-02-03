@@ -22,6 +22,9 @@ namespace Hospice.Models
             return userIdentity;
         }
 
+        protected ApplicationDbContext ApplicationDbContext { get; set; }
+        protected UserManager<ApplicationUser> UserManager { get; set; }
+
         //add more properties here from our custom classes
         [Display(Name = "First Name")]
         [Required(ErrorMessage = "You cannot leave the first name blank.")]

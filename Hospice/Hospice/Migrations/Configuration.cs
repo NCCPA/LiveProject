@@ -120,7 +120,9 @@ namespace Hospice.Migrations
                 UserName = "admin@outlook.com",
                 Email = "admin@outlook.com",
                 FName = "Amanda",
-                LName = "Ricki"
+                LName = "Cage",
+                PhoneNumber = "905-341-3222",
+                DOB = new DateTime(1989,04,22)
             };
 
 
@@ -129,8 +131,10 @@ namespace Hospice.Migrations
             {
                 UserName = "staff@outlook.com",
                 Email = "staff@outlook.com",
-                FName = "staffAmanda",
-                LName = "Ricki"
+                FName = "Jay",
+                LName = "Swanson",
+                PhoneNumber = "905-341-3222",
+                DOB = new DateTime(1990,05,23)
             };
 
             //Create Volunteer
@@ -138,8 +142,10 @@ namespace Hospice.Migrations
             {
                 UserName = "volunteer@outlook.com",
                 Email = "volunteer@outlook.com",
-                FName = "staffAmanda",
-                LName = "Ricki"
+                FName = "Erika",
+                LName = "Meele",
+                PhoneNumber = "905-341-3222",
+                DOB = DateTime.Today
             };
 
 
