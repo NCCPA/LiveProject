@@ -1,17 +1,26 @@
-﻿<div class="page-header">
+﻿@model Hospice.Models.RegisterViewModel
+
+<div class="page-header">
     <h1>Profile - @User.Identity.Name</h1>
 </div>
 
 <div class="row">
-    <div class="col-md-4">
-        <img src="~/img/adminLogin.jpg" class="img-responsive" alt="Profile Picture" />
+    <div class="col-xs-6 col-md-4">
+        <a href="#" class="thumbnail">
+            <img src="http://placehold.it/350x150">
+        </a>
+        <div class="caption">
+            <a href="#" class="btn btn-primary col-md-12" role="button"><span class="glyphicon glyphicon-plus"></span> Upload New Profile Picture </a>
+        </div>
     </div>
 
     <div class="col-md-8">
       
         <div class="input-group">
-            <label class="control-label col-md-12">First Name:</label>
-            <label class="control-label col-md-12">Last Name:</label>
+            <label class="control-label col-md-8">First Name: @ViewData["FirstName"]</label>
+            <label class="control-label col-md-12">Last Name: @ViewData["LastName"]</label>
+            <label class="control-label col-md-12">Phone: @ViewData["Phone"]</label>
+            <label class="control-label col-md-12">Date Of Birth: @ViewData["DOB"]</label>
         </div>
 
     </div>
