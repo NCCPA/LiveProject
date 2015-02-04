@@ -13,5 +13,11 @@ namespace Hospice.Controllers
         {
             return View();
         }
+
+        //GET: MemberList
+        public ActionResult MemberList()
+        {
+            return View();
+        }
     }
 }
