@@ -10,11 +10,8 @@ $(document).ready(function () {
     });
 
 
-   $("")
-
-
-    $("button").click(function () {
-        $("div").toggle();
+    $(".backHistory").click(function () {
+        history.back();
     });
 
 

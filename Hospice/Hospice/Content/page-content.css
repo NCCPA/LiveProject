@@ -44,3 +44,8 @@ a {
 a:hover {
     color:#1a3275;
 }
+
+/*Fix Modal Movement*/
+.modal-open[style] {
+padding-right: 0px !important;
+}

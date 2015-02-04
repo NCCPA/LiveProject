@@ -604,6 +604,8 @@
     <Content Include="Views\Event\Index.cshtml" />
     <Content Include="Views\Admin\_MemberControl.cshtml" />
     <Content Include="Views\Admin\MemberList.cshtml" />
+    <Content Include="Views\Profile\_UploalModal.cshtml" />
+    <Content Include="Views\Files\_DeleteModal.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
