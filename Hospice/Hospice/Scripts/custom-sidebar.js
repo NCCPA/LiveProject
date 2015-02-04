@@ -2,7 +2,7 @@
 $(document).ready(function () {
     //<![CDATA[
     $(function() {
-        $('.nav li a').each(function() {
+        $('#showdiv').each(function () {
             if ($(this).attr('href')  ===  window.location.pathname) {
                 $(this).parent().addClass('active');
             }
@@ -10,6 +10,10 @@ $(document).ready(function () {
     });  
     //]]>
 
+
+    $("button").click(function () {
+        $("div").toggle();
+    });
 
 
     ////make sidebar big as viewport or devicing viewing

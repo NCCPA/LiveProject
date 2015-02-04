@@ -11,7 +11,7 @@
     </div>
 
     <div class="panel panel-default">
-        <div class="panel-heading">Files Upload, Download<span class="widget-icon-right glyphicon glyphicon-cog"></span></div>
+        <div class="panel-heading">Files | Upload | Download<span class="widget-icon-right glyphicon glyphicon-cog"></span></div>
             <div class="panel-body">
             <h2>File List</h2>
             <h4>Upload New File</h4>
@@ -23,36 +23,45 @@
                     <input type="submit" name="Submit" id="Submit" value="Upload" />
                 }
             </p>
-            <table class="table">
-                <tr>
-                    <th>
-                        @Html.DisplayNameFor(model => model.FileName)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.FileDescription)
-                    </th>
-                    <th></th>
-                </tr>
+            <div class="row">
+                <div class="col-xs-12 col-sm-10  col-sm-push-1">
+                    <button type="button" id="showdiv"class="btn btn-success"><span class="widget-icon-right glyphicon glyphicon-folder-open"> Folder Icon</button>
+                   <br />
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-10  col-sm-push-1">
+                            <table class="table panel-heading well well-sm">
+                                <tr>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.FileName)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.FileDescription)
+                                    </th>
+                                    <th></th>
+                                </tr>
 
-                @foreach (var item in Model)
-                {
-                    <tr>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.FileName)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.FileDescription)
-                        </td>
-                        <td>
-                            @Html.ActionLink("Download", "Download", new { id = item.ID }) |
-                            @Html.ActionLink("Delete", "Delete", new { id = item.ID })
-                        </td>
-                    </tr>
-                }
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.FileName)
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.FileDescription)
+                                        </td>
+                                        <td>
+                                            @Html.ActionLink("Download", "Download", new { id = item.ID }) |
+                                            @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                                        </td>
+                                    </tr>
+                                }
 
-            </table>
-        </div>
-    </div>
+                            </table>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
 </div>
 
 
