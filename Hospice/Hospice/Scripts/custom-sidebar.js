@@ -13,8 +13,8 @@ $(document).ready(function () {
    $("")
 
 
-    $("button").click(function () {
-        $("div").toggle();
+   $("#showfile").click(function () {
+       $(this).nextAll('.fileList:first').slideToggle();
     });
 
 
