@@ -1,14 +1,16 @@
 ﻿//Change the active class on the sidebar depending on the page...
 $(document).ready(function () {
-    //<![CDATA[
+
     $(function() {
         $('.nav li a').each(function() {
             if ($(this).attr('href')  ===  window.location.pathname) {
                 $(this).parent().addClass('active');
             }
         });
-    });  
-    //]]>
+    });
+
+
+   $("")
 
 
 
