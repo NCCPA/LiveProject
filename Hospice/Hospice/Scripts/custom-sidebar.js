@@ -1,6 +1,7 @@
 ﻿//Change the active class on the sidebar depending on the page...
 $(document).ready(function () {
 
+    $('.fileList').hide();
     $(function() {
         $('#showdiv').each(function () {
             if ($(this).attr('href')  ===  window.location.pathname) {
@@ -13,7 +14,7 @@ $(document).ready(function () {
    $("")
 
 
-   $("#showfile").click(function () {
+   $(".showfile").click(function () {
        $(this).nextAll('.fileList:first').slideToggle();
     });
 

@@ -25,41 +25,140 @@
             </p>
             <div class="row">
                 <div class="col-xs-12 col-sm-10  col-sm-push-1">
-                    <a href="#" type="button" id="showfile" class="btn btn-success">  <span class="widget-icon-right glyphicon glyphicon-folder-open"> </span>  Folder Icon  </a>
                    <br />
                        
-                    <div class="row fileList">
-                        <div class="col-xs-12 col-sm-10  col-sm-push-1">
-                            <table class="table panel-heading well well-sm">
-                                <tr>
-                                    <th>
-                                        @Html.DisplayNameFor(model => model.FileName)
-                                    </th>
-                                    <th>
-                                        @Html.DisplayNameFor(model => model.FileDescription)
-                                    </th>
-                                    <th></th>
-                                </tr>
 
-                                @foreach (var item in Model)
-                                {
-                                    <tr>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.FileName)
-                                        </td>
-                                        <td>
-                                            @Html.DisplayFor(modelItem => item.FileDescription)
-                                        </td>
-                                        <td>
-                                            @Html.ActionLink("Download", "Download", new { id = item.ID }) |
-                                            @Html.ActionLink("Delete", "Delete", new { id = item.ID })
-                                        </td>
-                                    </tr>
-                                }
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Folder Name 
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>
+                                    <!--  <a href="#" type="button" class="btn btn-success showfile">  <span class="widget-icon-right glyphicon glyphicon-folder-open"> </span>  Folder Icon  </a><br /> --->
 
-                            </table>
-                        </div>
-                    </div>
+                                    <a href="#" class="showfile"> <span class="widget-icon-left  glyphicon glyphicon-folder-open"> </span> &nbsp; Folder Icon  </a><br />
+                            <div class="row fileList">
+                                <br />
+                                <div class="col-xs-12 col-sm-10  col-sm-push-1">
+                                    <table class="table panel-heading well well-sm ">
+                                        <tr>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.FileName)
+                                            </th>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.FileDescription)
+                                            </th>
+                                            <th></th>
+                                        </tr>
+
+                                        @foreach (var item in Model)
+                                        {
+                                            <tr>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.FileName)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.FileDescription)
+                                                </td>
+                                                <td>
+                                                    @Html.ActionLink("Download", "Download", new { id = item.ID }) |
+                                                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                                                </td>
+                                            </tr>
+                                        }
+
+                                    </table>
+                                </div>
+                            </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>
+                                    <a href="#" class="showfile"> <span class="widget-icon-left  glyphicon glyphicon-folder-open"> </span> &nbsp; Folder Icon  </a><br />  <div class="row fileList">
+                                        <br />
+                                        <div class="col-xs-12 col-sm-10  col-sm-push-1">
+                                            <table class="table panel-heading well well-sm ">
+                                                <tr>
+                                                    <th>
+                                                        @Html.DisplayNameFor(model => model.FileName)
+                                                    </th>
+                                                    <th>
+                                                        @Html.DisplayNameFor(model => model.FileDescription)
+                                                    </th>
+                                                    <th></th>
+                                                </tr>
+
+                                                @foreach (var item in Model)
+                                                {
+                                                    <tr>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.FileName)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.FileDescription)
+                                                        </td>
+                                                        <td>
+                                                            @Html.ActionLink("Download", "Download", new { id = item.ID }) |
+                                                            @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                                                        </td>
+                                                    </tr>
+                                                }
+
+                                            </table>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>
+                                    <a href="#" class="showfile"> <span class="widget-icon-left  glyphicon glyphicon-folder-open"> </span> &nbsp; Folder Icon  </a><br />
+                                      <div class="row fileList">
+                                        <br />
+                                        <div class="col-xs-12 col-sm-10  col-sm-push-1">
+                                            <table class="table panel-heading well well-sm ">
+                                                <tr>
+                                                    <th>
+                                                        @Html.DisplayNameFor(model => model.FileName)
+                                                    </th>
+                                                    <th>
+                                                        @Html.DisplayNameFor(model => model.FileDescription)
+                                                    </th>
+                                                    <th></th>
+                                                </tr>
+
+                                                @foreach (var item in Model)
+                                                {
+                                                    <tr>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.FileName)
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(modelItem => item.FileDescription)
+                                                        </td>
+                                                        <td>
+                                                            @Html.ActionLink("Download", "Download", new { id = item.ID }) |
+                                                            @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                                                        </td>
+                                                    </tr>
+                                                }
+
+                                            </table>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+             
                     </div>
                 </div>
                 </div>
