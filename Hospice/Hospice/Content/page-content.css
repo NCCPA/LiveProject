@@ -49,3 +49,18 @@ a:hover {
 .modal-open[style] {
 padding-right: 0px !important;
 }
+
+.btn-blue {
+    background-color:#2d52b7;
+    color:white;
+}
+
+.btn-blue:hover, .btn-blue:focus {
+    background-color:#1a3275;
+    color:white;
+}
+
+.btn-primary, 
+.btn-primary:hover, .btn-primary:focus {
+    color:black;
+}
