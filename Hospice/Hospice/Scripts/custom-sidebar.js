@@ -11,7 +11,9 @@ $(document).ready(function () {
     });
 
 
-   $("")
+    $(".backHistory").click(function () {
+        history.back();
+    })
 
 
    $(".showfile").click(function () {
