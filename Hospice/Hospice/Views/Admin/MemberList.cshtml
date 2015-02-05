@@ -11,7 +11,7 @@
                     <th>Name</th>
                     <th>Phone</th>
                     <th>Date Of Birth</th>
-                    <th><a href="/Account/Register" class="btn btn-primary"><span class="glyphicon-plus-sign glyphicon"></span> User</a></th>
+                    <th><a href="/Account/Register" class="btn btn-primary col-md-6"><span class="glyphicon-plus-sign glyphicon"></span> User</a></th>
                 </tr>
             @foreach (var item in Model)
             {
@@ -19,7 +19,7 @@
                     <td>@Html.DisplayFor( modelItem => item.FName) @Html.DisplayFor( modelItem => item.LName)</td>
                     <td>@Html.DisplayFor( modelItem => item.PhoneNumber)</td>
                     <td>@Html.DisplayFor( modelItem => item.DOB)</td>
-                    <td>@Html.ActionLink("View Profile", "Index", new { controller = "Profile", ID = item.Id })</td>
+                    <td><a class="btn btn-default col-md-6" href="@Url.Action("Index","Profile", new { ID = item.Id })"><span class="glyphicon glyphicon-user"></span> View Profiles</a></td>
                 </tr>
             }
         </table>
