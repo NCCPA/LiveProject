@@ -28,10 +28,13 @@ namespace Hospice.Controllers
             var currentUserId = User.Identity.GetUserId();
             var currentUser = manager.FindById(currentUserId);
 
-            if (id != "")
+
+            if (id != null) 
             {
                 currentUser = manager.FindById(id);
             }
+
+           
 
             return View(currentUser);
         }
