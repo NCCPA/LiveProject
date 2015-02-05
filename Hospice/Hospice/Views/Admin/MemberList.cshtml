@@ -1,46 +1,29 @@
-﻿<div class="page-header" style="border-bottom:none;">
+﻿@model IEnumerable<Hospice.Models.ApplicationUser>
+
+<div class="page-header" style="border-bottom:none;">
     <h1>Member List</h1>
 </div>
 
 <div class="row">
     <div class="col-md-12">
-        <table class="table table-responsive table-hover">
-            <tr>
-                <th>Name</th>
-                <th>Phone</th>
-                <th>Role</th>
-                <th>SubRole</th>
-                <th ><a class="btn btn-default col-md-5" href="/Account/Register" ><span class="glyphicon glyphicon-plus-sign"></span> Add User</a></th>
-            </tr>
-            <tr>
-                <td>Andrei Morozov</td>
-                <td>905-341-3711</td>
-                <td>Admin</td>
-                <td>Staff?</td>
-                <td><a class="btn btn-default col-md-5" href="#"><span class="glyphicon glyphicon-pencil"></span> View Profile</a> </td>
-            </tr>
-            <tr>
-                <td>Andrei Morozov</td>
-                <td>905-341-3711</td>
-                <td>Admin</td>
-                <td>Staff?</td>
-                <td><a class="btn btn-default col-md-5" href="#"><span class="glyphicon glyphicon-pencil"></span> View Profile</a> </td>
-            </tr>
-            <tr>
-                <td>Andrei Morozov</td>
-                <td>905-341-3711</td>
-                <td>Admin</td>
-                <td>Staff?</td>
-                <td><a class="btn btn-default col-md-5" href="#"><span class="glyphicon glyphicon-pencil"></span> View Profile</a> </td>
-            <tr>
-                <td>Andrei Morozov</td>
-                <td>905-341-3711</td>
-                <td>Admin</td>
-                <td>Staff?</td>
-                <td><a class="btn btn-default col-md-5" href="#"><span class="glyphicon glyphicon-pencil"></span> View Profile</a> </td>
-
-            </tr>
+            <table class="table table-responsive table-hover">
+                <tr>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Date Of Birth</th>
+                    <th><a href="/Account/Register" class="btn btn-primary"><span class="glyphicon-plus-sign glyphicon"></span> User</a></th>
+                </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor( modelItem => item.FName) @Html.DisplayFor( modelItem => item.LName)</td>
+                    <td>@Html.DisplayFor( modelItem => item.PhoneNumber)</td>
+                    <td>@Html.DisplayFor( modelItem => item.DOB)</td>
+                    <td>@Html.ActionLink("View Profile", "Index", new { controller = "Profile", ID = item.Id })</td>
+                </tr>
+            }
         </table>
+          
         <a href="/Admin/Index" class="btn btn-primary">Back to Admin Controls</a>
     </div>
 </div>

@@ -9,6 +9,8 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Hospice.Models;
 using System;
+using Microsoft.AspNet.Identity.EntityFramework;
+using System.Net;
 
 namespace Hospice.Controllers
 {
@@ -17,21 +19,21 @@ namespace Hospice.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Profile
-        public ActionResult Index()
+        public ActionResult Index(string id)
         {
-            
+            //Initialize store and manager
+            var manager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new ApplicationDbContext()));
 
-            //Find User by to get information for profile
-            string currentUserId = User.Identity.GetUserId();
-            var currentUser = db.Users.FirstOrDefault(x => x.Id == currentUserId);
+            //Get Current Id and Display it to the User
+            var currentUserId = User.Identity.GetUserId();
+            var currentUser = manager.FindById(currentUserId);
 
+            if (id != "")
+            {
+                currentUser = manager.FindById(id);
+            }
 
-            ViewData["FirstName"] = currentUser.FName;
-            ViewData["LastName"] = currentUser.LName;
-            ViewData["Phone"] = currentUser.PhoneNumber;
-            ViewData["DOB"] = currentUser.DOB.Value.ToShortDateString();
-
-            return View();
+            return View(currentUser);
         }
     }
 }

@@ -213,6 +213,7 @@
     <Compile Include="Models\MeetingPrivacy.cs" />
     <Compile Include="Models\MeetingResource.cs" />
     <Compile Include="Models\Notification.cs" />
+    <Compile Include="Models\ProfileViewModel.cs" />
     <Compile Include="Models\Role.cs" />
     <Compile Include="Models\RSVP.cs" />
     <Compile Include="Models\Schedule.cs" />
@@ -600,12 +601,11 @@
     <Content Include="Views\Meetings\Index.cshtml" />
     <Content Include="Views\Schedule\Index.cshtml" />
     <Content Include="Views\Profile\Index.cshtml" />
-    <Content Include="Views\Files\Delete.cshtml" />
     <Content Include="Views\Event\Index.cshtml" />
     <Content Include="Views\Admin\_MemberControl.cshtml" />
     <Content Include="Views\Admin\MemberList.cshtml" />
-    <Content Include="Views\Profile\_UploalModal.cshtml" />
-    <Content Include="Views\Files\_DeleteModal.cshtml" />
+    <Content Include="Views\Profile\_UploadModal.cshtml" />
+    <Content Include="Views\Files\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
