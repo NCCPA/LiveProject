@@ -20,10 +20,9 @@
     <div class="col-xs-9 col-md-10">
         <ul class="list-unstyled">
             <li>First Name: @Html.DisplayFor( model => Model.FName ) </li>
-            <li>Last Name: @Model.LName</li>
-            <li>Date of Birth: @Model.DOB.Value.ToShortDateString()</li>
-            <li>E-Mail: @Model.Email</li>
-            <li>@Model.Position</li>
+            <li>Last Name: @Html.DisplayFor( model => Model.LName)</li>
+            <li>Date of Birth: @Html.DisplayFor( model => Model.DOB.Value.ToShortDateString())</li>
+            <li>E-Mail: @Html.DisplayFor( model => Model.Email)</li>
         </ul>
     </div>
 
