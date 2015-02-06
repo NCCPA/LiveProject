@@ -198,6 +198,10 @@
     <Compile Include="Migrations\201502030058483_added UserManager.Designer.cs">
       <DependentUpon>201502030058483_added UserManager.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201502060337599_folderSON.cs" />
+    <Compile Include="Migrations\201502060337599_folderSON.Designer.cs">
+      <DependentUpon>201502060337599_folderSON.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AnounceFile.cs" />
@@ -610,6 +614,10 @@
     <Content Include="Views\Files\Delete.cshtml" />
     <Content Include="Views\Home\_FilesControl.cshtml" />
     <Content Include="Views\Profile\Edit.cshtml" />
+    <Content Include="Views\Home\_AnnounceControl.cshtml" />
+    <Content Include="Views\Home\_MeetingControl.cshtml" />
+    <Content Include="Views\Home\_EventsControl.cshtml" />
+    <Content Include="Views\Home\_MiniCalendarControl.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -637,6 +645,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201502030058483_added UserManager.resx">
       <DependentUpon>201502030058483_added UserManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201502060337599_folderSON.resx">
+      <DependentUpon>201502060337599_folderSON.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

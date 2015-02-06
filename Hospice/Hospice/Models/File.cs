@@ -11,6 +11,9 @@ namespace Hospice.Models
         public int ID { get; set; }
 
         [Required]
+        public int folderID { get; set; }
+
+        [Required]
         public byte[] FileContent { get; set; }
 
         [Required]
@@ -27,6 +30,9 @@ namespace Hospice.Models
     public class FileViewModel
     {
         public int ID { get; set; }
+
+        [Required]
+        public int folderID { get; set; }
 
         [Required]
         [StringLength(256)]
