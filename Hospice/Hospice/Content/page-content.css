@@ -66,3 +66,20 @@ padding-right: 0px !important;
 .btn-primary:hover, .btn-primary:focus {
     color:black;
 }
+
+
+a:link.showfile{
+    text-decoration: none;
+}
+
+a:visited.showfile {
+    text-decoration: none;
+}
+
+a:hover.showfile {
+    text-decoration: none;
+}
+
+a:active.showfile {
+    text-decoration: none;
+}
