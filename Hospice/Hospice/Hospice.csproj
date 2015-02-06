@@ -202,6 +202,10 @@
     <Compile Include="Migrations\201502060337599_folderSON.Designer.cs">
       <DependentUpon>201502060337599_folderSON.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201502060408485_filefolder.cs" />
+    <Compile Include="Migrations\201502060408485_filefolder.Designer.cs">
+      <DependentUpon>201502060408485_filefolder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AnounceFile.cs" />
@@ -209,6 +213,7 @@
     <Compile Include="Models\AnouncePrivacy.cs" />
     <Compile Include="Models\File.cs" />
     <Compile Include="Models\Folder.cs" />
+    <Compile Include="Models\FolderPrivacy.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\LinkHome.cs" />
     <Compile Include="Models\LinkStaff.cs" />
@@ -648,6 +653,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201502060337599_folderSON.resx">
       <DependentUpon>201502060337599_folderSON.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201502060408485_filefolder.resx">
+      <DependentUpon>201502060408485_filefolder.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
