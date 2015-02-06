@@ -12,47 +12,47 @@
             <div class="form-group">
                 <label for="FName" class="control-label col-md-3">First Name</label>
                 <div class="col-md-9">
-                    <input type="text" class="form-control" id="FName" value="@Html.DisplayFor( model => Model.FName)" /> 
+                    <input type="text" class="form-control" id="FName" value="@Html.DisplayFor( model => model.UserName)" /> 
                 </div>
             </div>
 
             <div class="form-group">
                 <label for="LName" class="control-label col-md-3">Last Name</label>
                 <div class="col-md-9">
-                    <input type="text" class="form-control" id="LName" value="@Html.DisplayFor( model => Model.LName)" /> 
+                    <input type="text" class="form-control" id="LName" value="@Html.DisplayFor( model => model.LName)" /> 
                 </div>
             </div>
 
             <div class="form-group">
                 <label for="Phone" class="control-label col-md-3">Phone Number</label>
                 <div class="col-md-4">
-                    <input type="tel" class="form-control" id="Phone" value="@Html.DisplayFor( model => Model.PhoneNumber)" />
+                    <input type="tel" class="form-control" id="Phone" value="@Html.DisplayFor( model => model.PhoneNumber)" />
                 </div>
                 
                 <label for="ExNum" class="control-label col-md-1">Ex:</label>
                 <div class="col-md-4">
-                    <input type="text" class="form-control" id="ExNum" value="@Html.DisplayFor( model => Model.UserPhoneExt)" />
+                    <input type="text" class="form-control" id="ExNum" value="@Html.DisplayFor( model => model.UserPhoneExt)" />
                 </div>
             </div>
 
             <div class="form-group">
                 <label for="DOB" class="control-label col-md-3">Date of Birth</label>
                 <div class="col-md-9">
-                    <input type="date" class="form-control" id="DOB" value="@Html.DisplayFor( model => Model.DOB)" />
+                    <input type="date" class="form-control" id="DOB" value="@Html.DisplayFor( model => model.DOB)" />
                 </div>
             </div>
             
             <div class="form-group">
                 <label for="EMail" class="control-label col-md-3">E-Mail</label>
                 <div class="col-md-9">
-                    <input type="email" class="form-control" id="EMail" value="@Html.DisplayFor( model => Model.Email)" />
+                    <input type="email" class="form-control" id="EMail" value="@Html.DisplayFor( model => model.Email)" />
                 </div>
             </div>
 
             <div class="form-group">
                 <label for="posDesc" class="control-label col-md-3">Description</label>
                 <div class="col-md-9">
-                    <textarea class="form-control" id="posDesc" />@Html.DisplayFor(model => Model.PositionDescription)</textarea>
+                    @Html.TextAreaFor((model => model.PositionDescription), new { @class = "form-control" })
                 </div>
             </div>
 
