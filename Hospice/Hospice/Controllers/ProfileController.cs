@@ -27,16 +27,21 @@ namespace Hospice.Controllers
             //Get Current Id and Display it to the User
             var currentUserId = User.Identity.GetUserId();
             var currentUser = manager.FindById(currentUserId);
-
-
+            
+            //If Coming here as admin to view member profile
             if (id != null) 
             {
                 currentUser = manager.FindById(id);
             }
 
-           
-
             return View(currentUser);
+        }
+
+        // GET: Edit
+        public ActionResult Edit(string id)
+        {
+
+            return View();
         }
     }
 }
