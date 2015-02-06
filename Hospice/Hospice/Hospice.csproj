@@ -610,6 +610,10 @@
     <Content Include="Views\Files\Delete.cshtml" />
     <Content Include="Views\Home\_FilesControl.cshtml" />
     <Content Include="Views\Profile\Edit.cshtml" />
+    <Content Include="Views\Home\_AnnounceControl.cshtml" />
+    <Content Include="Views\Home\_MeetingControl.cshtml" />
+    <Content Include="Views\Home\_EventsControl.cshtml" />
+    <Content Include="Views\Home\_MiniCalendarControl.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
