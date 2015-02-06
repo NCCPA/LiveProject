@@ -102,6 +102,7 @@ namespace Hospice.Models
 
         public DbSet<File> Files { get; set; }
         public DbSet<Folder> Folders { get; set; }
+        public DbSet<FolderPrivacy> FolderPrivacys { get; set; }
 
         public DbSet<Meeting> Meetings { get; set; }
         public DbSet<MeetingPrivacy> MeetingPrivacys { get; set; }

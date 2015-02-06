@@ -206,6 +206,10 @@
     <Compile Include="Migrations\201502060408485_filefolder.Designer.cs">
       <DependentUpon>201502060408485_filefolder.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201502060411578_filefolder2.cs" />
+    <Compile Include="Migrations\201502060411578_filefolder2.Designer.cs">
+      <DependentUpon>201502060411578_filefolder2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AnounceFile.cs" />
@@ -656,6 +660,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201502060408485_filefolder.resx">
       <DependentUpon>201502060408485_filefolder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201502060411578_filefolder2.resx">
+      <DependentUpon>201502060411578_filefolder2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
