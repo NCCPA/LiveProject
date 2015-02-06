@@ -1,5 +1,6 @@
 ﻿using System.Globalization;
 using System.Linq;
+using System.Data.Entity;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using System.Web;
@@ -46,14 +47,14 @@ namespace Hospice.Controllers
 
             //Get Current Id and Display it to the User
             var currentUserId = User.Identity.GetUserId();
-            var currentUser = manager.FindById(currentUserId);
+            var currentUser = db.Users.Include(p => p.Roles).Where(x => x.Id == currentUserId);
 
             //If Coming here as admin to view member profile
             if (id != null)
             {
-                currentUser = manager.FindById(id);
+                ApplicationUser editUser = db.Users.Where(u => u.Id == id).SingleOrDefault();
+                return View(editUser);
             }
-
 
             return View(currentUser);
         }
