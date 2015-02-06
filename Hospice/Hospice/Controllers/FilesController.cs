@@ -21,7 +21,8 @@ namespace Hospice.Controllers
                                ID = f.ID,
                                FileName = f.FileName,
                                MimeType = f.MimeType,
-                               FileDescription = f.FileDescription
+                               FileDescription = f.FileDescription,
+                               folderID = f.folderID
                            };
             return View(fileList.ToList());
         }
