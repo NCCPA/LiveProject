@@ -1,6 +1,8 @@
 ﻿//Change the active class on the sidebar depending on the page...
 $(document).ready(function () {
 
+    $("#input-1a").fileinput();
+
     $('.fileList').hide();
     $(function() {
         $('#showdiv').each(function () {

@@ -225,6 +225,7 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-fileinput.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\custom-nav.css" />
     <Content Include="Content\Dash.css" />
@@ -545,6 +546,7 @@
     <Content Include="img\Hopspice-Niagara-Logo.png" />
     <Content Include="img\nightImage.jpg" />
     <Content Include="img\Stabler-Centre---black-no-bkg.gif" />
+    <Content Include="Scripts\bootstrap-fileinput.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\custom-sidebar.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />

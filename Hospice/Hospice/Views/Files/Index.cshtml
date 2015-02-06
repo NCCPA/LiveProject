@@ -11,23 +11,28 @@
     </div>
 
     <div class="panel panel-default">
-        <div class="panel-heading">Files | Upload | Download<span class="widget-icon-right glyphicon glyphicon-cog"></span></div>
-            <div class="panel-body">
-            <h2>File List</h2>
-            <h4>Upload New File</h4>
-            <p>
-                @using (Html.BeginForm("Index", "Files", FormMethod.Post, new { enctype = "multipart/form-data" }))
-                {
-                    <label for="fileDescription">Description:</label> <input type="text" name="fileDescription" /><br />
-                    <input type="file" name="FileUpload1" /><br />
-                    <input type="submit" name="Submit" id="Submit" value="Upload" />
-                }
-            </p>
+        <div class="panel-heading">Files</div>
+            <div class="panel-body">               
+                    <h2>Upload New File</h2>      
+                   
+                        @using (Html.BeginForm("Index", "Files", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                        {
+                            <div class="col-md-6">
+                                <label for="fileDescription" class="control-label">Description</label>
+                                <input type="text" class="form-control" name="fileDescription" />
+                            </div>
+                            <div class="col-md-6">
+                                <label class="control-label">Select File</label>
+                                <input type="file" id="input-1a" class="file" name="FileUpload1" /><br />
+                            </div>                    
+                        }         
+                <div class="col-md-12">
+                <hr class="hr-style" />
+                    </div> 
             <div class="row">
                 <div class="col-xs-12 col-sm-10  col-sm-push-1">
-                   <br />
                        
-
+                    
                     <table class="table table-striped">
                         <thead>
                             <tr>
