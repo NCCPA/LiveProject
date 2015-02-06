@@ -27,9 +27,9 @@ namespace Hospice.Controllers
             //Get Current Id and Display it to the User
             var currentUserId = User.Identity.GetUserId();
             var currentUser = manager.FindById(currentUserId);
-            
+
             //If Coming here as admin to view member profile
-            if (id != null) 
+            if (id != null)
             {
                 currentUser = manager.FindById(id);
             }
@@ -41,7 +41,21 @@ namespace Hospice.Controllers
         public ActionResult Edit(string id)
         {
 
-            return View();
+            //Initialize store and manager
+            var manager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new ApplicationDbContext()));
+
+            //Get Current Id and Display it to the User
+            var currentUserId = User.Identity.GetUserId();
+            var currentUser = manager.FindById(currentUserId);
+
+            //If Coming here as admin to view member profile
+            if (id != null)
+            {
+                currentUser = manager.FindById(id);
+            }
+
+
+            return View(currentUser);
         }
     }
 }

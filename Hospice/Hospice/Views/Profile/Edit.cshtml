@@ -1,1 +1,76 @@
-﻿
+﻿@model Hospice.Models.ApplicationUser
+
+<div class="page-header">
+    <h1>Edit Profile</h1>
+</div>
+
+<div class="row">
+
+<!--@@Html.BeginForm()  Add This When Ready -->
+    <div class="col-xs-6 col-md-6">
+        <div class="form-horizontal">
+            <div class="form-group">
+                <label for="FName" class="control-label col-md-3">First Name:</label>
+                <div class="col-md-9">
+                    <input type="text" class="form-control" id="FName" value="@Html.DisplayFor( model => Model.FName)" /> 
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="LName" class="control-label col-md-3">Last Name:</label>
+                <div class="col-md-9">
+                    <input type="text" class="form-control" id="LName" value="@Html.DisplayFor( model => Model.LName)" /> 
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="Phone" class="control-label col-md-3">Phone Number:</label>
+                <div class="col-md-4">
+                    <input type="tel" class="form-control" id="Phone" value="@Html.DisplayFor( model => Model.PhoneNumber)" />
+                </div>
+                
+                <label for="ExNum" class="control-label col-md-1">Ex:</label>
+                <div class="col-md-4">
+                    <input type="text" class="form-control" id="ExNum" value="@Html.DisplayFor( model => Model.UserPhoneExt)" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="DOB" class="control-label col-md-3">Date of Birth:</label>
+                <div class="col-md-9">
+                    <input type="date" class="form-control" id="DOB" value="@Html.DisplayFor( model => Model.DOB)" />
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="EMail" class="control-label col-md-3">E-Mail:</label>
+                <div class="col-md-9">
+                    <input type="email" class="form-control" id="EMail" value="@Html.DisplayFor( model => Model.Email)" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="posDesc" class="control-label col-md-3">Description:</label>
+                <div class="col-md-9">
+                    <textarea class="form-control" id="posDesc" />@Html.DisplayFor(model => Model.PositionDescription)</textarea>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="ddlRole" class="control-label col-md-3">User Type:</label>
+                <div class="col-md-9">
+                    <select class="form-control">
+                        <option>@Html.DisplayFor( model => Model.RoleID) </option>
+                    </select>
+                </div>
+            </div>
+            
+
+
+        </div>
+    </div>
+
+    @Html.Partial("_UploadModal")
+
+
+</div>
