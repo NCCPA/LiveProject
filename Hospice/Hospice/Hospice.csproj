@@ -198,6 +198,10 @@
     <Compile Include="Migrations\201502030058483_added UserManager.Designer.cs">
       <DependentUpon>201502030058483_added UserManager.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201502060337599_folderSON.cs" />
+    <Compile Include="Migrations\201502060337599_folderSON.Designer.cs">
+      <DependentUpon>201502060337599_folderSON.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AnounceFile.cs" />
@@ -641,6 +645,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201502030058483_added UserManager.resx">
       <DependentUpon>201502030058483_added UserManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201502060337599_folderSON.resx">
+      <DependentUpon>201502060337599_folderSON.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
