@@ -20,16 +20,16 @@ namespace Hospice.Migrations
 
         protected override void Seed(Hospice.Models.ApplicationDbContext context)
         {
-            //var roles = new List<Role> 
-            //{ 
-            //    new Role { roleName = "Volunteer"}, 
-            //    new Role { roleName = "Board"}, 
-            //    new Role { roleName = "Staff"}, 
-            //    new Role { roleName = "Admin"}
-            //};
+           // var roles = new List<Role> 
+           // { 
+             //   new Role { Name = "Volunteer"}, 
+             //   new Role { Name = "Board"}, 
+             //   new Role { Name = "Staff"}, 
+            //    new Role { Name = "Admin"}
+           // };
 
-            //roles.ForEach(d => context.Roles.AddOrUpdate(x => x.roleName, d));
-            //context.SaveChanges();
+           // roles.ForEach(d => context.Roles.AddOrUpdate(x => x.Name, d));
+         //   context.SaveChanges();
 
             //var users = new List<Hospice.Models.User> 
             //{ 
@@ -44,45 +44,31 @@ namespace Hospice.Migrations
             //users.ForEach(d => context.Users.AddOrUpdate(x => x.Phone, d));
             //SaveChanges(context);
 
-            //var subroles = new List<Hospice.Models.SubRole> 
-            //{ 
-            //    new Hospice.Models.SubRole { roleName = "Bereavement", RoleID = 0},
-            //    new Hospice.Models.SubRole { roleName = "Community", RoleID = 0},
-            //    new Hospice.Models.SubRole { roleName = "Day Hospice", RoleID = 0},
-            //    new Hospice.Models.SubRole { roleName = "Residential", RoleID = 0},
-            //    new Hospice.Models.SubRole { roleName = "Welcome Desk", RoleID = 0},
-            //    new Hospice.Models.SubRole { roleName = "Event (non client)", RoleID = 0},
-            //    new Hospice.Models.SubRole { roleName = "Admin (non client)", RoleID = 0},
-            //    new Hospice.Models.SubRole { roleName = "New Volunteers", RoleID = 0},
-            //    new Hospice.Models.SubRole { roleName = "Audit & Finance Committee", RoleID = 1},
-            //    new Hospice.Models.SubRole { roleName = "Community Relations Committee", RoleID = 1},
-            //    new Hospice.Models.SubRole { roleName = "Governance Committee", RoleID = 1},
-            //    new Hospice.Models.SubRole { roleName = "Operations and Quality Improvement Committee", RoleID = 1},
-            //    new Hospice.Models.SubRole { roleName = "New Board Members", RoleID = 1},
-            //    new Hospice.Models.SubRole { roleName = "Leadership", RoleID = 2},
-            //    new Hospice.Models.SubRole { roleName = "Admin", RoleID = 2},
-            //    new Hospice.Models.SubRole { roleName = "Community", RoleID = 2},
-            //    new Hospice.Models.SubRole { roleName = "Outreach", RoleID = 2},
-            //    new Hospice.Models.SubRole { roleName = "Residential", RoleID = 2},
-            //    new Hospice.Models.SubRole { roleName = "New Staff", RoleID = 2}
-            //};
+            var subroles = new List<Hospice.Models.SubRole> 
+            { 
+                new Hospice.Models.SubRole { roleName = "Bereavement", RoleID = 0},
+                new Hospice.Models.SubRole { roleName = "Community", RoleID = 0},
+                new Hospice.Models.SubRole { roleName = "Day Hospice", RoleID = 0},
+                new Hospice.Models.SubRole { roleName = "Residential", RoleID = 0},
+                new Hospice.Models.SubRole { roleName = "Welcome Desk", RoleID = 0},
+                new Hospice.Models.SubRole { roleName = "Event (non client)", RoleID = 0},
+                new Hospice.Models.SubRole { roleName = "Admin (non client)", RoleID = 0},
+                new Hospice.Models.SubRole { roleName = "New Volunteers", RoleID = 0},
+                new Hospice.Models.SubRole { roleName = "Audit & Finance Committee", RoleID = 1},
+                new Hospice.Models.SubRole { roleName = "Community Relations Committee", RoleID = 1},
+                new Hospice.Models.SubRole { roleName = "Governance Committee", RoleID = 1},
+                new Hospice.Models.SubRole { roleName = "Operations and Quality Improvement Committee", RoleID = 1},
+                new Hospice.Models.SubRole { roleName = "New Board Members", RoleID = 1},
+                new Hospice.Models.SubRole { roleName = "Leadership", RoleID = 2},
+                new Hospice.Models.SubRole { roleName = "Admin", RoleID = 2},
+                new Hospice.Models.SubRole { roleName = "Community", RoleID = 2},
+                new Hospice.Models.SubRole { roleName = "Outreach", RoleID = 2},
+                new Hospice.Models.SubRole { roleName = "Residential", RoleID = 2},
+                new Hospice.Models.SubRole { roleName = "New Staff", RoleID = 2}
+            };
 
-            //subroles.ForEach(d => context.SubRoles.AddOrUpdate(x => x.roleName, d));
-            //SaveChanges(context);
-
-            //var usersubroles = new List<Hospice.Models.UserSubRole> 
-            //{ 
-            //    new Hospice.Models.UserSubRole {UserID = 2, SubRoleID = 1},
-            //    new Hospice.Models.UserSubRole {UserID = 2, SubRoleID = 2},
-            //    new Hospice.Models.UserSubRole {UserID = 1, SubRoleID = 10},
-            //    new Hospice.Models.UserSubRole {UserID = 3, SubRoleID = 10},
-            //    new Hospice.Models.UserSubRole {UserID = 1, SubRoleID = 11},
-            //    new Hospice.Models.UserSubRole {UserID = 4, SubRoleID = 17},
-            //    new Hospice.Models.UserSubRole {UserID = 4, SubRoleID = 18}
-            //};
-
-            //users.ForEach(d => context.Users.AddOrUpdate(x => x.Phone, d));
-            //SaveChanges(context);
+            subroles.ForEach(d => context.SubRoles.AddOrUpdate(x => x.roleName, d));
+            SaveChanges(context);
 
             var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(context));
 

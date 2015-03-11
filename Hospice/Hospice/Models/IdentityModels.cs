@@ -98,7 +98,6 @@ namespace Hospice.Models
        // public DbSet<Role> Roles { get; set; }
        // public DbSet<User> Users { get; set; }
         public DbSet<SubRole> SubRoles { get; set; }
-        public DbSet<UserSubRole> UserSubRoles { get; set; }
 
         public DbSet<File> Files { get; set; }
         public DbSet<Folder> Folders { get; set; }

@@ -17,11 +17,10 @@ namespace Hospice.Models
 
        
 
-        [Display(Name = "Role Name")]
+        [Display(Name = "Name")]
         [Required(ErrorMessage = "You cannot leave the role blank.")]
-        [StringLength(20, ErrorMessage = "First name cannot be more than 10 characters long.")]
-        public string roleName { get; set; }
+        [StringLength(20, ErrorMessage = "The name of the role cannot be more than 20 characters long.")]
+        public string Name { get; set; }
 
-        //public virtual ICollection<Users> Users { get; set; }
     }
 }
